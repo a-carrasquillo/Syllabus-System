@@ -1,0 +1,4 @@
+Remember that all these libreries are going to be inside the "lib" folder in the TOMCAT server alongside the libreries already there.
+
+The pom.xml file was used in a Maven project in Eclipse IDE to download all required libraries. Only one library could not be found in 
+the Maven repository and was added directly to this GitHub repository.
