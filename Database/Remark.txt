@@ -1,0 +1,3 @@
+NOTE: When an admin is to be added, the user needs to be created
+as the options provided on the sign up page, then go to the DB 
+and alter the role of the user to '0' so becomes an admin.
