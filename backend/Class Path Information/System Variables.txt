@@ -1,0 +1,38 @@
+Variable			Value
+CATALINA		  'Location of Tomcat' For Example: 'C:\Program Files\Apache Software Foundation\Tomcat 8.5'
+classpath		  See the list below.
+
+.;
+%CATALINA%\webapps\ROOT\WEB-INF\classes\;
+%CATALINA%\lib\mysql-connector-java-8.0.19.jar;
+%CATALINA%\lib\commons-codec-1.11.jar;
+%CATALINA%\lib\commons-io-2.6.jar;
+%CATALINA%\lib\poi-5.0.0.jar;
+%CATALINA%\lib\poi-ooxml-5.0.0.jar;
+%CATALINA%\lib\poi-ooxml-lite-5.0.0.jar;
+%CATALINA%\lib\xmlbeans-4.0.0.jar;
+%CATALINA%\lib\commons-compress-1.20.jar;
+%CATALINA%\lib\poi-ooxml-full-5.0.0.jar;
+%CATALINA%\lib\poi-excelant-5.0.0.jar;
+%CATALINA%\lib\poi-integration-5.0.0.jar;
+%CATALINA%\lib\poi-scratchpad-5.0.0.jar;
+%CATALINA%\lib\curvesapi-1.06.jar;
+%CATALINA%\lib\commons-collections4-4.1.jar;
+%CATALINA%\lib\slf4j-api-1.7.30.jar;
+%CATALINA%\lib\jcl-over-slf4j-1.7.30.jar;
+%CATALINA%\lib\commons-codec-1.15.jar;
+%CATALINA%\lib\commons-collections4-4.4.jar;
+%CATALINA%\lib\commons-math3-3.6.1.jar;
+%CATALINA%\lib\SparseBitSet-1.2.jar;
+%CATALINA%\lib\documents4j-local-1.0.3.jar;
+%CATALINA%\lib\documents4j-api-1.0.3.jar;
+%CATALINA%\lib\documents4j-transformer-1.0.3.jar;
+%CATALINA%\lib\documents4j-util-conversion-1.0.3.jar;
+%CATALINA%\lib\guava-18.0.jar;
+%CATALINA%\lib\zt-exec-1.8.jar;
+%CATALINA%\lib\documents4j-transformer-msoffice-word-1.0.3.jar;
+%CATALINA%\lib\documents4j-transformer-msoffice-base-1.0.3.jar;
+%CATALINA%\lib\documents4j-transformer-api-1.0.3.jar;
+%CATALINA%\lib\documents4j-util-all-1.0.3.jar;
+%CATALINA%\lib\documents4j-util-transformer-process-1.0.3.jar;
+%CATALINA%\lib\slf4j-simple-1.7.30.jar;
