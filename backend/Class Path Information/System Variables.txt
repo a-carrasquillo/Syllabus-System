@@ -5,7 +5,6 @@ classpath		  See the list below.
 .;
 %CATALINA%\webapps\ROOT\WEB-INF\classes\;
 %CATALINA%\lib\mysql-connector-java-8.0.19.jar;
-%CATALINA%\lib\commons-codec-1.11.jar;
 %CATALINA%\lib\commons-io-2.6.jar;
 %CATALINA%\lib\poi-5.0.0.jar;
 %CATALINA%\lib\poi-ooxml-5.0.0.jar;
@@ -17,7 +16,6 @@ classpath		  See the list below.
 %CATALINA%\lib\poi-integration-5.0.0.jar;
 %CATALINA%\lib\poi-scratchpad-5.0.0.jar;
 %CATALINA%\lib\curvesapi-1.06.jar;
-%CATALINA%\lib\commons-collections4-4.1.jar;
 %CATALINA%\lib\slf4j-api-1.7.30.jar;
 %CATALINA%\lib\jcl-over-slf4j-1.7.30.jar;
 %CATALINA%\lib\commons-codec-1.15.jar;
