@@ -1,0 +1,333 @@
+import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+.menu-area li a {
+  text-decoration: none;
+}
+
+.menu-area li {
+  list-style-type: none;
+}
+
+.custom-padding{
+  padding-top: 25px;
+}
+
+nav {
+  position: fixed;
+  left:0.5%;
+  width: calc(100% - 60px);
+  margin: 0 auto;
+  padding: 10px 0;
+  background: rgb(220, 31, 51);
+  z-index: 1;
+  text-align: right;
+  padding-right: 2%;
+}
+
+.logo {
+    position: fixed;
+    margin-top: 1.7%;
+    margin-left: 4%;
+    width: 11%;
+    height: 9%;
+    float: left; 
+    border-radius: 15px;
+    z-index: 500;
+}
+
+.menu-area li {
+  display: inline-block;
+}
+
+/*<a> tag inside the menu area*/
+.menu-area a {
+    text-transform: uppercase;
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+
+.menu-area a#activo:hover {
+    cursor: default;
+}
+
+.menu-area a:hover:after {
+  transform: translateY(-50%) rotate(-35deg);
+}
+
+.menu-area #activo { 
+    cursor: default;
+    border-bottom: 2px solid white;
+}
+
+nav:before {
+  position: absolute;
+  content: '';
+  border-top: 10px solid #333;
+  border-right: 10px solid #333;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  top: 100%;
+  left: 0;
+}
+
+nav:after {
+  position: absolute;
+  content: '';
+  border-top: 10px solid #333;
+  border-left: 10px solid #333;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  top: 100%;
+  right: 0;
+}
+
+/* The drop-down container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Drop-down button */
+.dropdown .dropbtn {
+    font-size: 16px;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.menu-area a:hover, .dropdown:hover .dropbtn {
+    background-color: lightslategray;
+    cursor: pointer;
+}
+
+/* Drop-down content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the drop-down */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to drop-down links on hover */
+.dropdown-content a:hover {
+  background-color: lightcoral;
+}
+
+/* Show the drop-down menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/*box where the form is located*/
+.cuadro_centro {
+    position: absolute;
+    left: 25%;
+    top: 18%;
+    min-height: 200%; 
+    width: 50%;
+    background-color: white;
+    border-radius: 5px;
+    border-color: rgb(220, 31, 51);
+    border-width: 10px;
+    border-style: solid;
+    margin-bottom: 2.5%;
+    padding-bottom: 2%;
+}
+
+.container {
+  background-color: #fefefe;
+  margin: 10% auto 5% auto; /* 10% from the top, 5% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Change styles for cancel button and create button on extra small screens */
+@media screen and (max-width: 300px) {
+  .backBtn, .downloadBtn, .printBtn {
+     width: 100%;
+  }
+}
+
+.cuadro_centro .logo {
+    position: relative;
+    display: block;
+    width: 30%;
+    height: auto;
+    margin-top: 2%;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-bottom: 2%;
+    z-index: 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+.tag {
+    padding-left: 5%;
+    max-width: 96%;
+    background-color: lightgrey;
+    border: none;
+    font-family: "Times New Roman";
+    font-size: 1.2vw;
+    font-weight: bold;
+}
+
+.tag:focus-within, .info:focus-within {
+    outline: none;
+}
+
+p.info {
+    padding-left: 5%;
+    border: none;
+    font-family: "Times New Roman";
+    font-size: 1vw;
+    text-align: justify;
+    width: 91%;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    border: 2px solid;
+    padding: 0.5%;
+}
+
+td { 
+    border: 2px solid;
+    height: auto;
+    width: auto;
+    text-align: center;
+    padding: 0.4%;
+}
+
+td.obj {
+    text-align: left;
+    padding-left: 1%;
+    width: 86%;
+}
+
+/* Full-width input fields */
+input[type=text], textarea, input[type=date], table {
+  width: 100%;
+  padding: 15px;
+  display: inline-block;
+  border: none;
+}
+
+.backBtn, .backBtn:hover{
+    position: relative;
+    font-size: 1.25vw;
+    background-color: red;
+    color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 20%;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: "Times New Roman";
+    text-align: center;
+    outline: none;
+    box-shadow: 0 9px #999;
+    margin-left: 5%;
+}
+
+.backBtn:hover{
+    background-color: darkred;
+}
+
+.backBtn:active{
+    background-color: darkred;
+    box-shadow: 0 5px #666666;
+    transform: translateY(4px);
+}
+
+.downloadBtn, .downloadBtn:hover{
+    position: relative;
+    margin-left: 15%;
+    font-size: 1.25vw;
+    background-color: darksalmon;
+    color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 20%;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: "Times New Roman";
+    text-align: center;
+    outline: none;
+    box-shadow: 0 9px #999;
+}
+
+.downloadBtn:hover{
+    background-color: salmon;
+}
+
+.downloadBtn:active{
+    background-color: salmon;
+    box-shadow: 0 5px #666666;
+    transform: translateY(4px);
+}
+
+.editBtn, .editBtn:hover{
+    position: relative;
+    margin-left: 15%;
+    font-size: 1.25vw;
+    background-color: green;
+    color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 20%;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: "Times New Roman";
+    text-align: center;
+    outline: none;
+    box-shadow: 0 9px #999;
+}
+
+.editBtn:hover{
+    background-color: darkgreen;
+}
+
+.editBtn:active{
+    background-color: darkgreen;
+    box-shadow: 0 5px #666666;
+    transform: translateY(4px);
+}

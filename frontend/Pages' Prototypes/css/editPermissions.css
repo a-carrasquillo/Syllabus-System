@@ -1,0 +1,344 @@
+import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.menu-area li a {
+  text-decoration: none;
+}
+
+.menu-area li {
+  list-style-type: none;
+}
+
+.custom-padding{
+  padding-top: 25px;
+}
+
+nav {
+  position: fixed;
+  left:0.5%;
+  width: calc(100% - 60px);
+  margin: 0 auto;
+  padding: 10px 0;
+  background: rgb(220, 31, 51);
+  z-index: 1;
+  text-align: right;
+  padding-right: 2%;
+}
+
+.logo {
+    position: fixed;
+    margin-top: 1.7%;
+    margin-left: 4%;
+    width: 11%;
+    height: 9%;
+    float: left; 
+    border-radius: 15px;
+    z-index: 500;
+}
+
+.menu-area li {
+  display: inline-block;
+}
+
+/*<a> tag inside the menu area*/
+.menu-area a {
+    text-transform: uppercase;
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+
+.menu-area a:hover:after {
+  transform: translateY(-50%) rotate(-35deg);
+}
+
+.menu-area #activo { 
+    cursor: default;
+    border-bottom: 2px solid white;
+}
+
+.menu-area a#activo:hover {
+    cursor: default;
+}
+
+.dropdown-content a#activo { 
+    cursor: default;
+    background-color: lightcoral;
+    border-bottom: 0px solid white;
+}
+
+.dropdown-content #activo:hover {
+    cursor: default;
+}
+
+nav:before {
+  position: absolute;
+  content: '';
+  border-top: 10px solid #333;
+  border-right: 10px solid #333;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  top: 100%;
+  left: 0;
+}
+
+nav:after {
+  position: absolute;
+  content: '';
+  border-top: 10px solid #333;
+  border-left: 10px solid #333;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  top: 100%;
+  right: 0;
+}
+
+/* The drop-down container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Drop-down button */
+.dropdown .dropbtn {
+    font-size: 16px;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.menu-area a:hover, .dropdown:hover .dropbtn {
+    background-color: lightslategray;
+    cursor: pointer;
+}
+
+/* Drop-down content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the drop-down */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to drop-down links on hover */
+.dropdown-content a:hover {
+  background-color: lightcoral;
+}
+
+/* Show the drop-down menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/*box where the form is located*/
+.cuadro_centro {
+    position:absolute;
+    left: 32.5%;
+    top: 25%;
+    min-height: 30%;
+    width: 35%;
+    background-color: white;
+    border-radius: 5px;
+    border-color: rgb(220, 31, 51);
+    border-width: 10px;
+    border-style: solid;
+    margin-bottom: 2.5%;
+}
+
+/* Change styles for cancel button and create button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelBtn, .submitBtn {
+     width: 100%;
+  }
+}
+
+table {
+    width: 85%;
+    border: 1px solid #888;
+    margin-top: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2vw;
+    margin-top: 2%;
+}
+
+td {
+    border: 2px solid transparent;
+}
+
+div.row {
+    margin-top: 2%;
+}
+
+span.tag {
+    position: relative;
+    margin-left: 4%;
+    font-size: 1.1vw;
+    font-weight: bold;
+}
+
+span.info {
+    position: relative;
+    margin-left: 0.3%;
+    font-size: 1.1vw;
+}
+
+.course {
+    width: 95%;
+    padding: 1%;
+    font-family: "Times New Roman";
+    font-size: 1.1vw;
+}
+
+.fechaLimite {
+    width: 70%;
+    padding: 1%;
+    font-family: "Times New Roman";
+    font-size: 1vw;
+}
+
+.cancelBtn, .cancelBtn:hover{
+    position: relative;
+    font-size: 1.25vw;
+    background-color: red;
+    color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 20%;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: "Times New Roman";
+    text-align: center;
+    outline: none;
+    box-shadow: 0 9px #999;
+    margin-top: 3%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+
+.cancelBtn:hover{
+    background-color: darkred;
+}
+
+.cancelBtn:active{
+    background-color: darkred;
+    box-shadow: 0 5px #666666;
+    transform: translateY(4px);
+}
+
+.submitBtn, .submitBtn:hover{
+    position: relative;
+    left: 10%;
+    font-size: 1.25vw;
+    background-color: green;
+    color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 30%;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: "Times New Roman";
+    text-align: center;
+    outline: none;
+    box-shadow: 0 9px #999;
+}
+
+.submitBtn:hover{
+    background-color: darkgreen;
+}
+
+.submitBtn:active{
+    background-color: darkgreen;
+    box-shadow: 0 5px #666666;
+    transform: translateY(4px);
+}
+
+.addPermissionsBtn, .addPermissionsBtn:hover{
+    position: relative;
+    left: 5%;
+    font-size: 1.25vw;
+    background-color: royalblue;
+    color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 30%;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: "Times New Roman";
+    text-align: center;
+    outline: none;
+    box-shadow: 0 9px #999;
+}
+
+.addPermissionsBtn:hover{
+    background-color: darkblue;
+}
+
+.addPermissionsBtn:active{
+    background-color: darkblue;
+    box-shadow: 0 4px #666666;
+    transform: translateY(4px);
+}
+
+.minusBtn, .minusBtn:hover{
+    position: relative;
+    left: 5%;
+    font-size: 1.25vw;
+    background-color: red;
+    color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 20%;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-family: "Times New Roman";
+    text-align: center;
+    outline: none;
+    box-shadow: 0 6px #999;
+}
+
+.minusBtn:hover{
+    background-color: darkred;
+}
+
+.minusBtn:active{
+    background-color: darkred;
+    box-shadow: 0 5px #666666;
+    transform: translateY(4px);
+}

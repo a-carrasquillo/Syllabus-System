@@ -1,0 +1,927 @@
+import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+.menu-area li a {
+  text-decoration: none;
+}
+
+.menu-area li {
+  list-style-type: none;
+}
+
+.custom-padding{
+  padding-top: 25px;
+}
+
+nav {
+  position: fixed;
+  left:0.5%;
+  width: calc(100% - 60px);
+  margin: 0 auto;
+  padding: 10px 0;
+  background: rgb(220, 31, 51);
+  z-index: 1;
+  text-align: right;
+  padding-right: 2%;
+}
+
+.logo {
+    position: fixed;
+    margin-top: 1.7%;
+    margin-left: 4%;
+    width: 11%;
+    height: 9%;
+    float: left; 
+    border-radius: 15px;
+    z-index: 500;
+}
+
+.menu-area li {
+  display: inline-block;
+}
+
+/*<a> tag inside the menu area*/
+.menu-area a {
+    text-transform: uppercase;
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu-area a#activo:hover {
+    cursor: default;
+}
+
+.menu-area a:hover:after {
+  transform: translateY(-50%) rotate(-35deg);
+}
+
+.menu-area #activo { 
+    cursor: default;
+    border-bottom: 2px solid white;
+}
+
+nav:before {
+  position: absolute;
+  content: '';
+  border-top: 10px solid #333;
+  border-right: 10px solid #333;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  top: 100%;
+  left: 0;
+}
+
+nav:after {
+  position: absolute;
+  content: '';
+  border-top: 10px solid #333;
+  border-left: 10px solid #333;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  top: 100%;
+  right: 0;
+}
+
+/* The drop-down container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Drop-down button */
+.dropdown .dropbtn {
+    font-size: 16px;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.menu-area a:hover, .dropdown:hover .dropbtn {
+    background-color: lightslategray;
+    cursor: pointer;
+}
+
+/* Drop-down content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the drop-down */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to drop-down links on hover */
+.dropdown-content a:hover {
+  background-color: lightcoral;
+}
+
+/* Show the drop-down menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/*box where the form is located*/
+.cuadro_centro {
+    position: absolute;
+    left: 25%;
+    top: 18%;
+    min-height: 200%; 
+    width: 50%;
+    background-color: white;
+    border-radius: 5px;
+    border-color: rgb(220, 31, 51);
+    border-width: 10px;
+    border-style: solid;
+    margin-bottom: 2.5%;
+}
+
+#course_code, #course_title, #course_type, #modality, #level, #prerequisite, #corequisite, #duration, #credits, #program_belongs {
+    position: relative;
+    height: 1.2%;
+    width: 100%;
+    border: 1.5px solid transparent;
+    padding-top: 2.5%;
+}
+
+#course_code_tag, #title_tag, #course_type_tag, #modality_tag, #level_tag, #prerequisite_tag, #corequisite_tag, #duration_tag, #credits_tag, #program_belongs_tag {  
+    position: relative;    
+    cursor: default;
+    left: 3.8%;
+    font-size: 1.25vw;
+    font-family: "Times New Roman", Times, serif;
+}
+
+#course_code_info, #course_title_info, #course_type_info, #modality_info, #prerequisite_info, #corequisite_info, #duration_info, #credits_info {
+    position: relative;,
+    height: 100%;
+    border: 1.5px solid #555;
+    width: 71%;
+    left: 5.7%;
+    font-size: 1.25vw;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+}
+
+/*Course Title Section*/
+#course_title_info {
+    left: 7.6%;
+}
+
+/*Course Type Section*/
+#course_type_info {
+    left: 9.5%
+}
+
+/*Modality Section*/
+#modality_info {
+    left: 13%
+}
+
+/*Course Level Section*/
+#nivel {
+    position: relative; 
+    height: 100%;
+    border: 1.5px solid #555;
+    width: 71%;
+    left: 18%;
+    font-size: 1.25vw;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    cursor: pointer;
+}
+
+/*course prerequisite section*/
+#prerequisite_info {
+    left: 9%;
+}
+
+/*course co-requisite section*/
+#corequisite_info {
+    left: 9.5%;
+}
+
+/*course duration section*/
+#duration_info {
+    left: 14.3%;
+}
+
+/*course credits section*/
+#credits_info {
+    left: 15.2%;
+}
+
+/*course description section*/
+#description {
+    display: inline-block;
+    position: relative;
+    height: 5%;
+    width: 98%;
+    border: 1.5px solid transparent;
+    padding-top: 2.5%;
+}
+
+#description_tag {  
+    position: relative; 
+    display: inline-block;
+    cursor: default;
+    left: 3.8%;
+    font-size: 1.25vw;
+    font-family: "Times New Roman", Times, serif;
+    width: 15%;
+    top: -87px;
+}
+
+#description_info {
+    position: relative;
+    left: 10%;
+    height: 100%;
+    border: 1.5px solid #555;
+    width: 71%;
+    font-size: 1.25vw;
+    text-align: left;
+    font-family: "Times New Roman", Times, serif;
+    padding: 1%;
+}
+
+/*course justification section*/
+#justification {
+    position: relative;
+    height: 5%;
+    width: 100%;
+    border: 1.5px solid transparent;
+    padding-top: 2%;
+    display: inline-block;
+}
+
+#justification_tag {  
+    position: relative; 
+    /*display: inline-block;*/
+    cursor: default;
+    left: 3.8%;
+    font-size: 1.25vw;
+    font-family: "Times New Roman", Times, serif;
+    top: -110px;
+}
+
+#justification_info {
+    position: relative;
+    left: 11%;
+    top: 2%;
+    height: 100%;
+    border: 1.5px solid #555;
+    width: 69.5%;
+    font-size: 1.25vw;
+    text-align: left;
+    font-family: "Times New Roman", Times, serif;
+    padding: 1%;
+}
+
+/*course objectives section*/
+#objectives {
+    padding-top: 2.5%;
+}
+
+#objectives_tag {  
+    position: relative;    
+    cursor: default;
+    left: 3.8%;
+    font-size: 1.25vw;
+    font-family: "Times New Roman", Times, serif;
+    padding-bottom: 2.5%;
+}
+
+#agencias{
+    position: relative;
+    width: 88.5%;
+    left: 3.8%;
+    font-size: 1.25vw;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.objective {
+    margin-top: 4%;
+    /*testing purposes*/
+    /*border: 1.5px solid #555;*/
+}
+
+.objective_tag {  
+    position: relative;    
+    cursor: default;
+    left: 3.8%;
+    font-size: 1.25vw;
+    font-family: "Times New Roman", Times, serif;
+    bottom: 82px;
+    /*testing purpose*/
+    /*border: 1.5px solid #555;*/
+}
+
+.objective_info {
+    position: relative;
+    font-size: 1.25vw;
+    font-family: "Times New Roman", Times, serif;
+    width: 77.5%;
+    left: 5%;
+    border: 1.5px solid #555;
+    height: 2.5%;
+    padding: 1%;
+}
+
+.align_tag {
+    position: relative;
+    font-size: 1.25vw;
+    font-family: "Times New Roman", Times, serif;
+    left: 3.8%;
+    padding-top: 1%;
+    padding-bottom: 1.75%
+    /*testing purpose*/
+    /*border: 1.5px solid #555;*/
+}
+
+.botones_objetivos {
+    position: absolute;
+    display: inline-block;
+    left: 62%;
+    bottom: -20%;
+}
+
+.caep_stds {
+    position: relative;
+    padding-top: 3%;
+    font-size: 1.25vw;
+    font-family: "Times New Roman", Times, serif;
+    left: 3.8%;
+    width: 93%;
+    height: 1.5%;
+    /*testing purpose*/
+    /*border: 1.5px solid #555;*/
+}
+
+.caep_stds_info {
+    position: relative;
+    font-size: 1.25vw;
+    font-family: "Times New Roman", Times, serif;
+    left: 1.5%;
+    width: 50%;
+}
+
+.all_caep_stds {
+    position: relative; 
+    height: 85%;
+    border: 1.5px solid #555;
+    max-width: 25%;
+    left: 15.5%;
+    font-size: 1.1vw;
+    font-family: "Times New Roman", Times, serif;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/*add course objective button*/
+#add_objective, #add_objective:hover {
+    color: white;
+    font-size: 1vw;
+    position: relative;
+    background-color: green;
+    border-radius: 10px;
+    font-family: "Times New Roman";
+    cursor: pointer;
+    left: 65%;
+    margin-top: 2%;
+}
+
+#add_objective:hover, #remove_objective:hover {
+    border: 2px solid transparent;
+}
+
+#remove_objective, #remove_objective:hover {
+    color: white;
+    font-size: 1vw;
+    position: relative;
+    background-color: red;
+    border-radius: 10px;
+    font-family: "Times New Roman";
+    cursor: pointer;
+    left: 64%;
+    margin-top: 2%;
+}
+
+/*Section thematic content*/
+#thematic_content_1{
+    position: relative;
+    padding-top: 3%;
+    font-size: 1.25vw;
+    font-family: "Times New Roman", Times, serif;
+    left: 3.8%;
+    width: 93%;
+    height: 1.5%;
+    /*testing purpose*/
+    /*border: 1.5px solid #555;*/
+}
+
+.thematic_content {
+    position: relative;
+    padding-top: 1.5%;
+    font-size: 1.25vw;
+    font-family: "Times New Roman", Times, serif;
+    left: 25%;
+    width: 93%;
+    height: 1.5%;
+    /*testing purpose*/
+    /*border: 1.5px solid #555;*/
+}
+
+.thematic_info{
+    position: relative;
+    font-size: 1.25vw;
+    font-family: "Times New Roman", Times, serif;
+    width: 73.5%;
+}
+
+/*add thematic content button*/
+#add_thematic_content, #add_thematic_content:hover {
+    color: white;
+    font-size: 1vw;
+    position: relative;
+    background-color: green;
+    border-radius: 10px;
+    font-family: "Times New Roman";
+    cursor: pointer;
+    left: 47.75%;
+    margin-top: 1%;
+}
+
+#add_thematic_content:hover, #remove_thematic_content:hover {
+    border: 2px solid transparent;
+}
+
+#remove_thematic_content, #remove_thematic_content:hover {
+    color: white;
+    font-size: 1vw;
+    position: relative;
+    background-color: red;
+    border-radius: 10px;
+    font-family: "Times New Roman";
+    cursor: pointer;
+    left: 46.5%;
+    margin-top: 1%;
+}
+
+/*Section of teaching strategies*/
+#teaching_strat_1, #assessment_strat_1, #student_assessment_1 {
+    position: relative;
+    padding-top: 4%;
+    font-size: 1.25vw;
+    font-family: "Times New Roman", Times, serif;
+    left: 3.8%;
+    width: 93%;
+    height: 1.5%;
+    /*testing purpose*/
+    /*border: 1.5px solid #555;*/
+}
+
+.teaching_strat_info, .assessment_strat_info, .student_assessment_info {
+    position: relative;
+    font-size: 1.25vw;
+    font-family: "Times New Roman", Times, serif;
+    width: 67.5%;
+    padding-left: 0.5%;
+}
+
+#botones_student_assessment, .botones_student_assessment {
+    position: absolute;
+    display: inline-block;
+    left: 62.5%;
+    bottom: -15%;
+}
+
+#all_student_assessment, .all_student_assessment {
+    position: relative; 
+    height: 85%;
+    border: 1.5px solid #555;
+    width: 27%;
+    left: 11.75%;
+    font-size: 1.1vw;
+    font-family: "Times New Roman", Times, serif;
+    cursor: pointer;
+}
+
+.teaching_strat, .assessment_strat, .student_assessment {
+    position: relative;
+    padding-top: 3%;
+    font-size: 1.25vw;
+    font-family: "Times New Roman", Times, serif;
+    left: 30.25%;
+    width: 93%;
+    height: 1.5%;
+    /*testing purpose*/
+    /*border: 1.5px solid #555;*/
+}
+
+#add_teaching_strat, #add_teaching_strat:hover {
+    color: white;
+    font-size: 1vw;
+    position: relative;
+    background-color: green;
+    border-radius: 10px;
+    font-family: "Times New Roman";
+    cursor: pointer;
+    left: 64%;
+    margin-top: 1%;
+}
+
+#add_teaching_strat:hover, #remove_teaching_strat:hover {
+    border: 2px solid transparent;
+}
+
+#remove_teaching_strat, #remove_teaching_strat:hover {
+    color: white;
+    font-size: 1vw;
+    position: relative;
+    background-color: red;
+    border-radius: 10px;
+    font-family: "Times New Roman";
+    cursor: pointer;
+    left: 63%;
+    margin-top: 1%;
+}
+
+.assessment_strat_info {
+    width: 66.5%;
+}
+
+#add_assessment_strat, #add_assessment_strat:hover {
+    color: white;
+    font-size: 1vw;
+    position: relative;
+    background-color: green;
+    border-radius: 10px;
+    font-family: "Times New Roman";
+    cursor: pointer;
+    left: 61.5%;
+    margin-top: 1%;
+}
+
+#add_assessment_strat:hover, #remove_assessment_strat:hover {
+    border: 2px solid transparent;
+}
+
+#remove_assessment_strat, #remove_assessment_strat:hover {
+    color: white;
+    font-size: 1vw;
+    position: relative;
+    background-color: red;
+    border-radius: 10px;
+    font-family: "Times New Roman";
+    cursor: pointer;
+    left: 60.5%;
+    margin-top: 1%;
+}
+
+.assessment_strat {
+    left: 31.2%;
+}
+
+/*Section of Student Assessment*/
+#botones_student_assessment {
+    left: 62.5%;
+}
+
+#add_student_assessment, #add_student_assessment:hover {
+    color: white;
+    font-size: 1vw;
+    position: relative;
+    background-color: green;
+    border-radius: 10px;
+    font-family: "Times New Roman";
+    cursor: pointer;
+    left: 81.5%;
+    margin-top: 1%;
+}
+
+#add_student_assessment:hover {
+   border: 2px solid transparent;
+}
+
+.student_assessment {
+    left: 31.3%;
+}
+
+.botones_student_assessment {
+    left: 33%;
+}
+
+.all_student_assessment {
+    left: 11.5%;
+}
+
+#grades_tag {
+    position: relative;
+    font-size: 1.25vw;
+    font-family: "Times New Roman", Times, serif;
+    width: 79.9%;
+    left: 3.5%;
+    height: 2.5%;
+    margin-top: 2%;
+}
+
+#textbook_1, #bibliography_1, #online_res_1{
+    position: relative;
+    padding-top: 3%;
+    font-size: 1.25vw;
+    font-family: "Times New Roman", Times, serif;
+    left: 3.8%;
+    width: 93%;
+    height: 1.5%;
+    /*testing purpose*/
+    /*border: 1.5px solid #555;*/
+}
+
+.textbook_content, .bibliography_content {
+    position: relative;
+    padding-top: 1.5%;
+    font-size: 1.25vw;
+    font-family: "Times New Roman", Times, serif;
+    left: 19.5%;
+    width: 93%;
+    height: 1.5%;
+    /*testing purpose*/
+    /*border: 1.5px solid #555;*/
+}
+
+.textbook_info, .bibliography_info {
+    position: relative;
+    font-size: 1.25vw;
+    font-family: "Times New Roman", Times, serif;
+    width: 79.5%;
+}
+
+/*add textbook content button*/
+#add_textbook, #add_textbook:hover {
+    color: white;
+    font-size: 1vw;
+    position: relative;
+    background-color: green;
+    border-radius: 10px;
+    font-family: "Times New Roman";
+    cursor: pointer;
+    left: 58.2%;
+    margin-top: 1%;
+}
+
+#add_textbook:hover, #remove_textbook:hover {
+    border: 2px solid transparent;
+}
+
+#remove_textbook, #remove_textbook:hover {
+    color: white;
+    font-size: 1vw;
+    position: relative;
+    background-color: red;
+    border-radius: 10px;
+    font-family: "Times New Roman";
+    cursor: pointer;
+    left: 57.2%;
+    margin-top: 1%;
+}
+
+/*section of bibliography*/
+.bibliography_info{
+    width: 81.6%;
+}
+
+#add_bibliography, #add_bibliography:hover {
+    color: white;
+    font-size: 1vw;
+    position: relative;
+    background-color: green;
+    border-radius: 10px;
+    font-family: "Times New Roman";
+    cursor: pointer;
+    left: 61%;
+    margin-top: 1%;
+}
+
+#add_bibliography:hover, #remove_bibliography:hover {
+    border: 2px solid transparent;
+}
+
+#remove_bibliography, #remove_bibliography:hover {
+    color: white;
+    font-size: 1vw;
+    position: relative;
+    background-color: red;
+    border-radius: 10px;
+    font-family: "Times New Roman";
+    cursor: pointer;
+    left: 60%;
+    margin-top: 1%;
+}
+
+.bibliography_content {
+    left: 17.5%;
+}
+
+.online_res_info {
+    position: relative;
+    font-size: 1.25vw;
+    font-family: "Times New Roman", Times, serif;
+    width: 75.7%;
+}
+
+#add_online_res, #add_online_res:hover {
+    color: white;
+    font-size: 1vw;
+    position: relative;
+    background-color: green;
+    border-radius: 10px;
+    font-family: "Times New Roman";
+    cursor: pointer;
+    left: 68%;
+    margin-top: 1%;
+}
+
+#add_online_res:hover, #remove_online_res:hover {
+    border: 2px solid transparent;
+}
+
+#remove_online_res, #remove_online_res:hover {
+    color: white;
+    font-size: 1vw;
+    position: relative;
+    background-color: red;
+    border-radius: 10px;
+    font-family: "Times New Roman";
+    cursor: pointer;
+    left: 67%;
+    margin-top: 1%;
+}
+
+.online_res_content {
+    position: relative;
+    padding-top: 1.5%;
+    font-size: 1.25vw;
+    font-family: "Times New Roman", Times, serif;
+    left: 23%;
+    width: 93%;
+    height: 1.5%;
+    /*testing purpose*/
+    /*border: 1.5px solid #555;*/
+}
+
+#reglas {
+    margin-left: 4%;
+    font-size: 1.25vw;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.regla {
+    position: relative;
+    font-size: 1vw;
+    font-family: "Times New Roman", Times, serif;
+    margin-top: 1%;
+}
+
+/*end buttons section*/
+#buttons {
+    position: relative;
+    height: 1.2%;
+    width: 100%;
+    border: 1.5px solid transparent;
+}
+
+/*Submit button style*/
+#submit, #submit:hover {
+    position: relative;
+    font-size: 1.25vw;
+    background-color: green;
+    color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 30%;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: "Times New Roman";
+    outline: none;
+    box-shadow: 0 9px #999;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    margin-left: 20%;
+}
+
+#submit:hover {
+    background-color: darkgreen;
+}
+
+#submit:active{
+    background-color: darkgreen;
+    box-shadow: 0 5px #666666;
+    transform: translateY(4px);
+}
+
+/*Cancel button style*/
+#cancel, #cancel:hover {
+    position: relative;
+    font-size: 1.25vw;
+    background-color: red;
+    color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 30%;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: "Times New Roman";
+    outline: none;
+    box-shadow: 0 9px #999;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+}
+
+#cancel:hover {
+    background-color: darkred;
+}
+
+#cancel:active{
+    background-color: darkred;
+    box-shadow: 0 5px #666666;
+    transform: translateY(4px);
+}
+
+button:focus-within {
+    outline: none;
+}
+
+.add {
+    color: white;
+    font-size: 1vw;
+    position: relative;
+    width: 100px;
+    background-color: green;
+    border-radius: 10px;
+    font-family: "Times New Roman";
+    cursor: pointer;
+}
+
+.add:hover {
+    color: white;
+    font-size: 1vw;
+    position: relative;
+    width: 100px;
+    background-color: green;
+    border-radius: 10px;
+    font-family: "Times New Roman";
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.remove {
+    color: white;
+    font-size: 1vw;
+    position: relative;
+    width: 100px;
+    background-color: red;
+    border-radius: 10px;
+    font-family: "Times New Roman";
+    cursor: pointer;
+}
+
+.remove:hover {
+    color: white;
+    font-size: 1vw;
+    position: relative;
+    width: 100px;
+    background-color: red;
+    border-radius: 10px;
+    font-family: "Times New Roman";
+    cursor: pointer;
+    border: 2px solid transparent;
+}

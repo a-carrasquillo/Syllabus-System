@@ -1,0 +1,207 @@
+body, html {
+    height:100%;
+    margin: 0;
+    padding: 0px;
+    font-family: sans-serif;
+    background-color: dimgray;
+}
+
+.background {
+    background-image: url(../images_icons/esc_educacion2.JPG);
+    -webkit-background-size:cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height:100%;
+    filter:blur(5px);
+}
+
+.franja{
+    z-index:100;
+    background-color:red;
+    width:100%;
+    height:18.674136321195144724556489262372%;
+    position: absolute;
+    top:0%;
+}
+
+#mainname {
+    position: absolute;
+    color: white;
+    font-size: 4.5vw;
+    text-align: center;
+    margin-top: 2.7%;
+    left: 5.5%;
+    padding-left: 15%;
+    text-shadow: -2px 2px 0 black, 2px 2px 0 black, 2px -2px 0 black; -2px -2px 0 black; 
+    font-family: "Times New Roman", Times, serif;
+    cursor: default;
+}   
+
+#logo {
+    position:absolute;
+    top: 17%;
+    left:1.18%;
+    width:17.5%;
+    height:70.67%;
+    float:left; 
+    border-radius: 15px;
+}
+
+.medioidentifier {   
+    position:absolute;
+    top:30.1%;
+    left:79.8%;
+    height:3.734%;
+    width:15.20%;
+    background-color: white;
+    transform: translate(-50%,50%);
+    z-index:300;
+    border-top-right-radius: 20px;
+    /*border-top-left-radius: 20px;*/
+    border-bottom-left-radius: 5px;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-bottom-width: 1px;
+}
+
+#credentialtxt {
+    position:absolute;
+    top:7.9%;
+    left:4.7%;
+    font-size: 1.2vw;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.mediobox {
+    position:absolute;
+    top:8.7%;
+    left:85%;
+    transform: translate(-50%,50%);
+    z-index:200;
+    background-color: white;
+    height: 50%;
+    width:25.9999999%;
+    border-radius: 20px;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    -moz-box-shadow:    inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow:         inset 0 0 10px #000000;
+}
+
+#user {
+    position:absolute;
+    left: 4.1%;
+    top:8.2%;
+    font-size: 1.25vw;
+    font-family: "Times New Roman", Times, serif;
+    cursor: default;
+}
+
+#pass { 
+    position:absolute;
+    left: 4.1%;
+    top:37.6%;
+    font-size: 1.25vw;
+    font-family: "Times New Roman", Times, serif;
+    cursor: default;
+}
+
+#uname {
+    position: absolute;
+    left: 4.1%;
+    top:18.2%;
+    height:9.5%;
+    width: 90%;
+    border: 1.5px solid #555;
+    border-radius: 15px;
+    font-size: 1.25vw;
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+}
+
+#uname:focus-within, #userpass:focus-within {
+    outline: none;
+}
+
+#userpass {
+    position: absolute;
+    left: 4.1%;
+    top:47.6%;
+    height:9.5%;
+    width: 90%;
+    border: 1.5px solid #555;
+    border-radius: 15px;
+    font-size: 1.25vw;
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+}
+
+#logbutton, #logbutton:hover {
+    position: relative;
+    margin-bottom: 5%;
+    margin-top: 57%;
+    left: 20%;
+    font-size: 1.25vw;
+    background-color: green;
+    color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 60%;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: "Times New Roman";
+    text-align: center;
+    outline: none;
+    box-shadow: 0 9px #999;
+}
+
+#logbutton:hover {
+    background-color: darkgreen;
+}
+
+#logbutton:active {
+    background-color: darkgreen;
+    box-shadow: 0 5px #666666;
+    transform: translateY(4px);
+}
+
+#signupLink { 
+    position:absolute;
+    color:dimgrey;
+    font-size:0.9vw;
+    text-align: center;
+    width: 100%;
+    top: 85%;
+    font-family: "Times New Roman", Times, serif;
+}
+
+#signupLink:hover {
+    position:absolute;
+    color:blue;
+    font-size:0.9vw;
+    text-align: center;
+    width: 100%;
+    top: 85%;
+    font-family: "Times New Roman", Times, serif;
+}
+
+#errorUserNamePass {
+    position: absolute;
+    display: block;
+    margin-top: 51%;
+    margin-left: 10%;
+    width: 80%;
+    color: red;
+    font-size: 0.8vw;
+    text-align: center;
+    border-color: none;
+    border-width: 0px;
+    background-color: none;
+    font-weight: bold;
+    z-index: 200;
+}
