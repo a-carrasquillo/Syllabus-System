@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!--Indicates the encoding of the characters-->
+        <meta charset="utf-8">
+        <!--Authors of the web page-->
+        <meta name="author" content="a-carrasquillo, arivesan">
+        <!--Importing the CSS style-sheet-->
+        <link rel = "stylesheet" type="text/css" href="css/changeReqList.css">
+        <!--Importing JS required-->
+        <script src="https://kit.fontawesome.com/7ea556f8eb.js" crossorigin="anonymous"></script>
+        <!--Website title-->
+        <title>Lista de Solicitudes</title>
+        <!--CSS required for the background picture-->
+        <style type="text/css">
+            body {
+              background-image: url(images_icons/esc_educacion2.JPG);
+              -webkit-background-size:cover;
+              background-size:cover;
+              background-position: center center;
+              height: 100vh;
+              background-repeat: no-repeat;
+              background-attachment: fixed;  
+            }
+        </style>
+    </head>
+    <body>
+        <img class ="logo" src="images_icons/uni-logo.png" alt="Logo Ana G. Mendez">
+        <!--Menu begins here-->
+        <div class="custom-padding">
+          <nav>
+            <ul class="menu-area">
+                <b>
+                    <li><a href="welcomeMenu.html">Home</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Añadir
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="addProgram.html">Programa</a>
+                                <a href="addNewCourse.html">Curso</a>
+                                <a href="addCourseToProgram.html">Cursos a Programas</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Reglas
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="addRules.html">Añadir Regla</a>
+                                <a href="listRules.html">Lista de Reglas</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn" id="activo">Listas
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="changeReqList.html" id="activo">Solicitudes de Cambio o Creación</a>
+                                <a href="holdSyllabusList.html">Prontuarios para Revisar</a>
+                                <a href="userChargeList.html">Permisos de los Usuarios</a>
+                                <a href="userAdminPrivList.html">Administradores Temporeros</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#">Ayuda</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                </b>
+            </ul>
+          </nav>
+        </div><!--Menu ends here-->
+        
+        <div class = "cuadro_centro">
+            <h1>Solicitud De Cambio o Creación:</h1>
+            <span class="userTag"><b>Usuario: </b></span>
+            <span id="cargoUsuario">Juan del Pueblo <i class="fa fa-user"></i></span>
+          <form class="changeReqListForm" action="changeReqDetails.jsp" method="post" onsubmit="return validate()">
+              <table>
+                  <tr>
+                      <th>Seleccionar</th>
+                      <th>Solicitante</th>
+                      <th>Programa</th>
+                      <th>Tipo de Solicitud</th>
+                      <th>Fecha Limite</th>
+                  </tr>
+                  <tr>
+                      <td><input type="checkbox" class="check" name="requestId" value="id#"></td>
+                      <td><input type="text" class="info" value="Juan del Pueblo" readonly></td>
+                      <td><input type="text" class="info" value="Educacion Fisica" readonly></td>
+                      <td><input type="text" class="info" value="Cambio de Prontuario" readonly></td>
+                      <td><input type="date" class="info" value="2020-10-04" readonly></td>
+                  </tr>
+                  <tr>
+                      <td><input type="checkbox" class="check" name="requestId" value="id#"></td>
+                      <td><input type="text" class="info" value="John Doe" readonly></td>
+                      <td><input type="text" class="info" value="Educacion Superior" readonly></td>
+                      <td><input type="text" class="info" value="Cambio de Prontuario" readonly></td>
+                      <td><input type="date" class="info" value="2020-10-09" readonly></td>
+                  </tr>
+                  <tr>
+                      <td><input type="checkbox" class="check" name="requestId" value="id#"></td>
+                      <td><input type="text" class="info" value="Maria Anders" readonly></td>
+                      <td><input type="text" class="info" value="Educacion Especial" readonly></td>
+                      <td><input type="text" class="info" value="Creación de Prontuario" readonly></td>
+                      <td><input type="date" class="info" value="2020-10-10" readonly></td>
+                  </tr>
+                  <tr>
+                      <td><input type="checkbox" class="check" name="requestId" value="id#"></td>
+                      <td><input type="text" class="info" value="Francisco Chang" readonly></td>
+                      <td><input type="text" class="info" value="Educacion Elemental" readonly></td>
+                      <td><input type="text" class="info" value="Cambio de Prontuario" readonly></td>
+                      <td><input type="date" class="info" value="2020-10-12" readonly></td>
+                  </tr>
+                  <tr>
+                      <td><input type="checkbox" class="check" name="requestId" value="id#"></td>
+                      <td><input type="text" class="info" value="Roland Ming" readonly></td>
+                      <td><input type="text" class="info" value="Educacion Intermedia" readonly></td>
+                      <td><input type="text" class="info" value="Creación de Prontuario" readonly></td>
+                      <td><input type="date" class="info" value="2020-10-20" readonly></td>
+                  </tr>      
+              </table>
+              <button type="button" class="cancelBtn" onclick="window.location.href='welcomeMenu.jsp';">Cancelar</button>
+              <button type="button" class="deleteBtn" onclick="window.location.href='deleteChangeCreationReq.jsp';">Denegar</button>
+              <button type="submit" class="selectBtn">Seleccionar</button>
+          </form>     
+        </div>
+    </body>
+</html>

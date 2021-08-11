@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <!--Indicates the encoding of the characters-->
+        <meta charset="utf-8">
+        <!--Authors of the web page-->
+        <meta name="author" content="a-carrasquillo, arivesan">
+        <!--Importing the CSS style-sheet-->
+        <link rel = "stylesheet" type="text/css" href="css/add_program.css">
+        <!--Importing JS required-->
+        <script src="https://kit.fontawesome.com/7ea556f8eb.js" crossorigin="anonymous"></script>
+        <!--Website title-->
+        <title>A&ntilde;adir Programa</title>
+    </head>
+    <body>
+        <img class ="logo" src="images_icons/uni-logo.png" alt="Logo Ana G. Mendez">
+        <div class="custom-padding">
+          <nav>
+            <ul class="menu-area">
+                <b>
+                    <li><a href="welcomeMenu.html">Home</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn" id="activo">A&ntilde;adir
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="addProgram.html" id="activo">Programa</a>
+                                <a href="addNewCourse.html">Curso</a>
+                                <a href="addCourseToProgram.html">Cursos a Programas</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Reglas
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="addRules.html">A&ntilde;adir Regla</a>
+                                <a href="listRules.html">Lista de Reglas</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Listas
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="changeReqList.html">Solicitudes de Cambio o Creaci&oacute;n</a>
+                                <a href="holdSyllabusList.html">Prontuarios para Revisar</a>
+                                <a href="userChargeList.html">Permisos de los Usuarios</a>
+                                <a href="userAdminPrivList.html">Administradores Temporeros</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="helpAddProgram.html">Ayuda</a></li>
+                    <li><a href="signout.jsp">Logout</a></li>
+                </b>
+            </ul>
+          </nav>
+        </div>
+        
+        <div class = "cuadro_centro">
+            <form action = 'processNewProgram.jsp' method="post">
+                <div id = "program_tag">Nombre Programa:</div>
+                <div><input type="text" id="program_name" name="program_name" placeholder="Introduzca el nombre del programa" required></div>
+                <div id = "academic_grade_tag">Grado Acad&eacute;mico:</div>
+                <select name="grado" required>
+                    <option value="">Seleccione un grado acad&eacute;mico</option>
+                    <option value="bachillerato">Bachillerato</option>
+                    <option value="maestria">Maestr&iacute;a</option>
+                    <option value="doctorado">Doctorado</option>
+                </select>
+                <div id = "code_tag">C&oacute;digo del Programa:</div>
+                <div><input type="text" id="program_code" name="program_code" placeholder="Introduzca el c&oacute;digo del programa" required></div>
+                <button id ="cancel" type="button" onclick="window.location.href='welcomeMenu.html';">Cancelar</button>
+                <button id ="submit" type="submit">Someter</button>
+            </form>
+        </div>
+    </body>
+</html>

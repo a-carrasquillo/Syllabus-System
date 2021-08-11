@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <!--Indicates the encoding of the characters-->
+        <meta charset="utf-8">
+        <!--Authors of the web page-->
+        <meta name="author" content="a-carrasquillo, arivesan">
+        <!--Importing the CSS style-sheet-->
+        <link rel = "stylesheet" type="text/css" href="css/addCourseToProgram.css">
+        <!--Importing JS required-->
+        <script src="https://kit.fontawesome.com/7ea556f8eb.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <!--Website title-->
+        <title>A&ntilde;adir Cursos a Programa</title>
+        <!--CSS required for background photo-->
+        <style type="text/css">
+            body {
+              background-image: url(images_icons/esc_educacion2.jpg);
+              -webkit-background-size:cover;
+              background-size:cover;
+              background-position: center center;
+              height: 100vh;
+              background-repeat: no-repeat;
+              background-attachment: fixed;  
+            }
+        </style>
+    </head>
+    <body>
+        <img class ="logo" src="images_icons/uni-logo.png" alt="Logo Ana G. Mendez">
+        <!--Menu begins here-->
+        <div class="custom-padding">
+          <nav>
+            <ul class="menu-area">
+                <b>
+                    <li><a href="welcomeMenu.html">Home</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn" id="activo">Añadir
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="addProgram.html">Programa</a>
+                                <a href="addNewCourse.html">Curso</a>
+                                <a href="addCourseToProgram.html" id="activo">Cursos a Programas</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Reglas
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="addRules.html">Añadir Regla</a>
+                                <a href="listRules.html">Lista de Reglas</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Listas
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="changeReqList.html">Solicitudes de Cambio o Creación</a>
+                                <a href="holdSyllabusList.html">Prontuarios para Revisar</a>
+                                <a href="userChargeList.html">Permisos de los Usuarios</a>
+                                <a href="userAdminPrivList.html">Administradores Temporeros</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="helpAddCourseToProgram.html">Ayuda</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                </b>
+            </ul>
+          </nav>
+        </div><!--Menu ends here-->
+        
+        <div class = "cuadro_centro">
+            <form action = 'processAddedProgramCourses.jsp' method="post" autocomplete="off">
+                <!--Academic Grade/Level Section-->
+                <div id = "academic_grade_tag">Grado Acad&eacute;mico:</div>
+                <select id = "academic_grade" name="grado" required>
+                    <option value="">Seleccione un grado acad&eacute;mico</option>
+                    <option value="bachillerato">Bachillerato</option>
+                    <option value="maestria">Maestria</option>
+                    <option value="doctorado">Doctorado</option>
+                </select>
+                <!--Course Program Section-->
+                <div id = "course_program_tag">Programa:</div>
+                <select id = "course_program" name="programs" onclick="isAcademicLevelSelected()" required>
+                    <option value="">Seleccione un programa</option>
+                    <!--Load the information from the DB-->
+                    <option value="4023" class="filter bachillerato">Preescolar</option>
+                    <option value="4001" class="filter bachillerato">Elemental Primario</option>
+                    <option value="4017" class="filter bachillerato">Inglés Elemental</option>
+                    <option value="4071" class="filter bachillerato">Educación Especial</option>
+                    <option value="4109" class="filter bachillerato">Educación Física</option>
+                    <option value="4014" class="filter bachillerato">Educación Secundaria Biología</option>
+                    <option value="4028" class="filter bachillerato">Educación Secundaria Ciencia</option>
+                    <option value="4019" class="filter bachillerato">Educación Secundaria Historia</option>
+                    <option value="4018" class="filter bachillerato">Educación Secundaria Inglés</option>
+                    <option value="4021" class="filter bachillerato">Educación Secundaria Matemáticas</option>
+                    <option value="4027" class="filter bachillerato">Educación Secundaria Química</option>
+                    <option value="4025" class="filter bachillerato">Educación Secundaria Vocacional Industrial</option>
+                    <option value="4044" class="filter maestria">Administración Educativa</option>
+                    <option value="4058" class="filter doctorado">Liderazgo Educativo</option>
+                    <!--End Load-->
+                </select>
+                <!--Course List Section-->
+                <div id = "course_list_tag">Cursos:</div>
+                <textarea id="course_list" name="course_list" placeholder="Seleccione los cursos del encasillado y al a&ntilde;adirlos se mostrar&aacute;n aqu&iacute;..." required rows="4" readonly></textarea>
+                <div id="coursebtns">
+                    <button id ="remove" type="button" onclick="removeCourse()">Remover</button>
+                    <button id ="add" type="button" onclick="addCourse()">A&ntilde;adir</button>
+                </div>
+                <select id = "courses" name="courses" onclick="isProgramSelected()">
+                    <option value="">Seleccione el curso deseado</option>
+                    <!--Load Information from the DB-->
+                    <option value="EDUC-106">EDUC-106</option>
+                    <option value="EDUC-123">EDUC-123</option>
+                    <option value="EDUC-171">EDUC-171</option>
+                    <!--End load-->
+                </select>
+                
+                <button id ="cancel" type="button" onclick="window.location.href='welcomeMenu.html';">Cancelar</button>
+                <button id ="submit" type="submit">Someter</button>
+            </form>
+        </div>
+        <script>
+            function isAcademicLevelSelected() {
+                if(document.getElementById('academic_grade').value == '') {
+                    alert('Primero necesita seleccionar un grado acad\u00e9mico!');
+                    document.getElementById('academic_grade').focus();
+                }
+            }
+            function isProgramSelected() {
+                if(document.getElementById('course_program').value== '') {
+                    alert('Primero debe seleccionar un programa!');
+                    document.getElementById('course_program').focus();
+                }
+            }
+            function addCourse() {
+                if(document.getElementById('courses').value== '') {
+                    alert('Selecione un curso!');
+                    document.getElementById('courses').focus();
+                } else {
+                    var course = document.getElementById('courses').value;
+                    var courseList = document.getElementById('course_list');
+                    if(courseList.value == '') {
+                        courseList.value = course + '\n';
+                    } else {
+                        if(courseList.value.search(course) == -1) {
+                            courseList.value = courseList.value + course + '\n';
+                        } else {
+                            alert('El curso ya existe en la lista!');
+                        }
+                    }
+                }
+            }
+            function removeCourse() {
+                if(document.getElementById('courses').value== '') {
+                    alert('Selecione un curso!');
+                    document.getElementById('courses').focus();
+                } else {
+                    var course = document.getElementById('courses').value;
+                    var courseList = document.getElementById('course_list');
+                    if(courseList.value == '') {
+                        alert('La lista esta vacia!');
+                    } else {
+                        if(courseList.value.search(course) == -1) {
+                            alert('El curso no existe en la lista!');
+                        } else {
+                            var removeval = document.getElementById('course_list').value;
+                            removeval = removeval.trim();
+                            var n = removeval.split("\n");
+                            var location = n.indexOf(course);
+                            delete n[location];
+                            var newval = n.join('\n');
+                            document.getElementById('course_list').value = newval.replace(/^\s*[\r\n]/gm, '') + '\n';
+                        }
+                    }
+                }
+            }
+            //JS for showing or hiding select options based on education level
+            $(function() {
+                $('#academic_grade').change(function(){
+                    $('#course_program').val('');
+                    $('#courses').val('');
+                    $('#course_list').val('');
+                    $('.filter').hide();
+                    $('.' + $(this).val()).show();
+                });
+                $('#course_program').change(function(){
+                    $('#courses').val('');
+                    $('#course_list').val('');
+                });
+            });
+        </script>
+    </body>
+</html>

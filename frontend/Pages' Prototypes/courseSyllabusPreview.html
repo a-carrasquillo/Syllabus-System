@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!--Indicates the encoding of the characters-->
+        <meta charset="utf-8">
+        <!--Authors of the web page-->
+        <meta name="author" content="a-carrasquillo, arivesan">
+        <!--Importing the CSS style-sheet-->
+        <link rel = "stylesheet" type="text/css" href="css/courseSyllabusPreview.css">
+        <!--Importing JS required-->
+        <script src="https://kit.fontawesome.com/7ea556f8eb.js" crossorigin="anonymous"></script>
+        <!--Website title-->
+        <title>Preview del Prontuario</title>
+        <!--CSS required for the background picture-->
+        <style type="text/css">
+            body {
+              background-image: url(images_icons/esc_educacion2.JPG);
+              -webkit-background-size:cover;
+              background-size:cover;
+              background-position: center center;
+              height: 100vh;
+              background-repeat: no-repeat;
+              background-attachment: fixed;  
+            }
+        </style>
+    </head>
+    <body>
+        <img class ="logo" src="images_icons/uni-logo.png" alt="Logo Ana G. Mendez">
+        <!--Menu begins here-->
+        <div class="custom-padding">
+          <nav>
+            <ul class="menu-area">
+                <b>
+                    <li><a href="welcomeMenu.html">Home</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Añadir
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="addProgram.html">Programa</a>
+                                <a href="addNewCourse.html">Curso</a>
+                                <a href="addCourseToProgram.html">Cursos a Programas</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Reglas
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="addRules.html">Añadir Regla</a>
+                                <a href="listRules.html">Lista de Reglas</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Listas
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="changeReqList.html">Solicitudes de Cambio o Creación</a>
+                                <a href="holdSyllabusList.html">Prontuarios para Revisar</a>
+                                <a href="userChargeList.html">Permisos de los Usuarios</a>
+                                <a href="userAdminPrivList.html">Administradores Temporeros</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="login.html">Logout</a></li>
+                </b>
+            </ul>
+          </nav>
+        </div><!--Menu ends here-->
+        
+        <div class = "cuadro_centro">
+            <form action="editSyllabus.jsp" method="post">
+                <div class="container">
+                    <div><img class ="logo" src="images_icons/uni-logo.png" alt="Logo Ana G. Mendez"></div>
+                    <div><h2>División de Educación</h2></div>
+                    
+                    <input type="hidden" name="courseCode" value="CPEN-358">
+                    
+                    <input type="text" class="tag" value="Código del Curso:" readonly>
+                    <p class="info">CPEN-358</p>
+                    
+                    <input type="text" class="tag" value="Título del Curso:" readonly>
+                    <p class="info">Programación Orientada a Objetos</p>
+                    
+                    <input type="text" class="tag" value="Tipo de Curso:" readonly>
+                    <p class="info">A-conferencia</p>
+                    
+                    <input type="text" class="tag" value="Modalidad:" readonly>
+                    <p class="info">Presencial</p>
+                    
+                    <input type="text" class="tag" value="Nivel:" readonly>
+                    <p class="info">Bachillerato</p>
+                    
+                    <input type="text" class="tag" value="Prerequesito/s:" readonly>
+                    <p class="info">ENGI-223</p>
+                    
+                    <input type="text" class="tag" value="Correquesito/s:" readonly>
+                    <p class="info">N/A</p>
+                    
+                    <input type="text" class="tag" value="Duración:" readonly>
+                    <p class="info">2 x 1.5 hrs por semana</p>
+                    
+                    <input type="text" class="tag" value="Créditos:" readonly>
+                    <p class="info">3 créditos</p>
+                    
+                    <input type="text" class="tag" value="Descripción del Curso:" readonly>
+                    <p class="info">Este es un curso para introducir a los estudiantes a la programacion orientada a objetos. En el mismo se estara utilizando JAVA como lenguaje de programacion. El enfoque del curso es mostrarle los conceptos claves de la programacion orientada a objetos, estos siendo la herencia, el polimorfismo, la encapsulacion, y la abstraccion.</p>
+                    
+                    <input type="text" class="tag" value="Justificación:" readonly>
+                    <p class="info">A continuación iría la justificación del curso.</p>
+                    <input type="text" class="tag" value="Objetivos Del Curso:" readonly>
+                    <p class="info">Al culminar el curso, el estudiante debe:</p>
+                    
+                    <table>
+                        <tr>
+                            <th>Objetivos del Curso</th>
+                            <th>CAEP</th>
+                        </tr>
+                        <tr>
+                            <td class="obj">1. Comprender la encapsulación</td>
+                            <td>1.1, 2.1, 3.1</td>
+                        </tr>
+                        <tr>
+                            <td class="obj">2. Comprender la abstracción</td>
+                            <td>1.2</td>
+                        </tr>
+                        <tr>
+                            <td class="obj">3. Comprender el poliformismo</td>
+                            <td>1.3</td>
+                        </tr>
+                        <tr>
+                            <td class="obj">4. Comprender la herencia</td>
+                            <td>1.4</td>
+                        </tr>
+                        <tr>
+                            <td class="obj">5. Resolver problemas utilizando la programacion orientada a objetos.</td>
+                            <td>1.5</td>
+                        </tr>
+                        <tr>
+                            <td class="obj">6. Entender la diferencia entre datos privados, protegidos y publicos</td>
+                            <td>1.6</td>
+                        </tr>
+                    </table>
+                    
+                    <input type="text" class="tag" value="Contenido Temático:" readonly>
+                    <p class="info">1. Tipos de datos</p>
+                    <p class="info">2. Analisis de Algoritmos</p>
+                    <p class="info">3. Pilares de la programacion orientada a objetos</p>
+                  
+                    <input type="text" class="tag" value="Estrategias de Enseñanza:" readonly>
+                    <p class="info">1. Estrategias de Enseñanza #1</p>
+                    <p class="info">2. Estrategias de Enseñanza #2</p>
+                    <p class="info">3. Estrategias de Enseñanza #3</p>
+                  
+                    <input type="text" class="tag" value="Estrategias de Assessment:" readonly>
+                    <p class="info">1. Estrategias de Assessment #1</p>
+                    <p class="info">2. Estrategias de Assessment #2</p>
+                    <p class="info">3. Estrategias de Assessment #3</p>
+                    
+                    <input type="text" class="tag" value="Sistemas de notas:" readonly>
+                    <p class="info">Sistema Estándar (A, B, C, D, F)</p>
+                    
+                    <input type="text" class="tag" value="Libro de Texto:" readonly>
+                    <p class="info">1. Delta, P.J. (2017). Java 9 for Programmers. 4th ed. Prentice Hall.</p>
+                    
+                    <input type="text" class="tag" value="Bibliografía:" readonly>
+                    <p class="info">1. Bibliografía #1</p>
+                    <p class="info">2. Bibliografía #2</p>
+                    
+                    <input type="text" class="tag" value="Recursos en Línea:" readonly>
+                    <p class="info">1. Recurso #1</p>
+                    <p class="info">2. Recurso #2</p>
+                    <p class="info">3. Recurso #3</p>
+                    
+                    <input type="text" class="tag" value="Reglas:" readonly>
+                        <p class="info"><b>Academic and Student policy statements</b>
+                        <br>Excepteur anim ingeniis id vidisse ita tamen aut nescius ex mandaremus, de velit incurreret adipisicing. Voluptate fore dolore nescius amet hic aliqua ita commodo, an nulla velit aut nostrud, arbitror dolor nescius ad litteris te    lorem, admodum quorum eu appellat cohaerescant sed aut aliqua fabulas nescius de  ubi duis illustriora. Probant illustriora eu tempor. Senserit comprehenderit si laborum, ea amet imitarentur, duis singulis ex elit dolor ad non mentitum      voluptatibus nam commodo malis ullamco, minim de pariatur qui eram, velit        admodum te efflorescere, an nulla domesticarum. Cernantur summis dolore arbitror  aliqua ea non quibusdam ad nostrud, singulis cohaerescant do ingeniis, culpa o    voluptate est veniam. Deserunt veniam id litteris comprehenderit, malis          consequat sed singulis non sunt cupidatat ex sempiternum, eiusmod culpa          incurreret.</p>
+                        
+                        <p class="info"><b>Plagiarism and Academic Integrity</b>
+                        <br>Excepteur anim ingeniis id vidisse ita tamen aut nescius ex mandaremus, de velit incurreret adipisicing. Voluptate fore dolore nescius amet hic aliqua ita commodo, an nulla velit aut nostrud, arbitror dolor nescius ad litteris te    lorem, admodum quorum eu appellat cohaerescant sed aut aliqua fabulas nescius de  ubi duis illustriora. Probant illustriora eu tempor. Senserit comprehenderit si laborum, ea amet imitarentur, duis singulis ex elit dolor ad non mentitum      voluptatibus nam commodo malis ullamco, minim de pariatur qui eram, velit        admodum te efflorescere, an nulla domesticarum. Cernantur summis dolore arbitror  aliqua ea non quibusdam ad nostrud, singulis cohaerescant do ingeniis, culpa o    voluptate est veniam. Deserunt veniam id litteris comprehenderit, malis          consequat sed singulis non sunt cupidatat ex sempiternum, eiusmod culpa          incurreret.</p>
+                    
+                    <input type="text" class="tag" value="Creado Por:" readonly>
+                    <p class="info">John Doe, 4/Octubre/2020</p>
+                    
+                    <input type="text" class="tag" value="Revisado Por:" readonly>
+                    <p class="info">Juan del Pueblo, 6/Octubre/2020</p>
+                </div>
+                <button type="button" class="backBtn">Go Back</button>
+                <button type="submit" class="editBtn" title="Editar"><i class="fa fa-edit"></i></button>
+                <button type="button" class="downloadBtn" title="Download"><i class="fa fa-download"></i></button>
+                
+              </form>
+        </div>
+    </body>
+</html>

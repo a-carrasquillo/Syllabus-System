@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!--Indicates the encoding of the characters-->
+        <meta charset="utf-8">
+        <!--Authors of the web page-->
+        <meta name="author" content="a-carrasquillo, arivesan">
+        <!--Importing the CSS style-sheet-->
+        <link rel = "stylesheet" type="text/css" href="css/changeReqDetails.css">
+        <!--Importing JS required-->
+        <script src="https://kit.fontawesome.com/7ea556f8eb.js" crossorigin="anonymous"></script>
+        <!--Website title-->
+        <title>Detalles de Solicitud</title>
+        <!--CSS required for the background picture-->
+        <style type="text/css">
+            body {
+              background-image: url(images_icons/esc_educacion2.JPG);
+              -webkit-background-size:cover;
+              background-size:cover;
+              background-position: center center;
+              height: 100vh;
+              background-repeat: no-repeat;
+              background-attachment: fixed;  
+            }
+        </style>
+    </head>
+    <body>
+        <img class ="logo" src="images_icons/uni-logo.png" alt="Logo Ana G. Mendez">
+        <!--Menu begins here-->
+        <div class="custom-padding">
+          <nav>
+            <ul class="menu-area">
+                <b>
+                    <li><a href="welcomeMenu.html">Home</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Añadir
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="addProgram.html">Programa</a>
+                                <a href="addNewCourse.html">Curso</a>
+                                <a href="addCourseToProgram.html">Cursos a Programas</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Reglas
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="addRules.html">Añadir Regla</a>
+                                <a href="listRules.html">Lista de Reglas</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Listas
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="changeReqList.html">Solicitudes de Cambio o Creación</a>
+                                <a href="holdSyllabusList.html">Prontuarios para Revisar</a>
+                                <a href="userChargeList.html">Permisos de los Usuarios</a>
+                                <a href="userAdminPrivList.html">Administradores Temporeros</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#">Ayuda</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                </b>
+            </ul>
+          </nav>
+        </div><!--Menu ends here-->
+        
+        <div class = "cuadro_centro">
+            <h1>Detalles de la Solicitud</h1>
+            
+            <form action="#" method="post">
+                <div class="row">
+                    <span class="tag">Nombre del Solicitante:</span>
+                    <span class="info">Juan del Pueblo</span>
+                </div>
+                <div class="row">
+                    <span class="tag">Tiempo Solicitado:</span>
+                    <span class="info">10/04/2020</span>
+                </div>
+                <div class="row">
+                    <span class="tag">Tipo de Solicitud:</span>
+                    <span class="info">Cambio de Prontuario</span>
+                </div>
+                <div class="row">
+                    <span class="tag">Programa Del Curso:</span>
+                    <span class="info">Educacion Fisica</span>
+                </div>
+                <div class="row">
+                    <span class="tag">Codigo De Curso:</span>
+                    <span class="info">FIS-123</span>
+                </div>
+                <div class="row">
+                    <span class="tag">Propósito de la solicitud:</span>
+                    <p class="info">Aqui la persona escribe el proposito de porque del cambio o la creacion del prontuario nuevo, puede incluir datos o justificaciones segun la ley. Tambien incluye la necesidad del mismo.</p>
+                </div>
+                <div class="row">
+                    <span class="tag">Fecha Maxima De Cambios:</span>
+                    <span class="info"><input type="date" id="fechaMaxCam" value="2020-10-04"></span>
+                </div>
+                    
+                <div>
+                    <button type="button" class="denyBtn">Denegar</button>
+                    <button type="submit" class="approveBtn">Aprovar</button> 
+                </div>  
+            </form>
+        </div>
+    </body>
+</html>
