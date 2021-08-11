@@ -1,0 +1,222 @@
+import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+#logo {
+    position: fixed;
+    top: 3%;
+    left: 1.18%;
+    width: 17.5%;
+    height: 13%;
+    float: left; 
+    border-radius: 15px;
+}
+
+.franja{
+    z-index: 100;
+    background-color: red;
+    width: 100%;
+    height: 18.674136321195144724556489262372%;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+}
+
+#mainname{
+    position: fixed;
+    color: white;
+    font-size: 4.5vw;
+    text-align: center;
+    margin-top: 2.7%;
+    left: 5.5%;
+    padding-left: 15%;
+    text-shadow: -2px 2px 0 black, 2px 2px 0 black, 2px -2px 0 black; -2px -2px 0 black; 
+    font-family: "Times New Roman", Times, serif;
+    cursor: default;
+}
+
+/*box where the form is located*/
+.cuadro_centro {
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    min-height: 85%; 
+    width: 50%;
+    background-color: white;
+    border-radius: 5px;
+    border-color: rgb(220, 31, 51);
+    border-width: 10px;
+    border-style: solid;
+    margin-bottom: 2%;
+}
+
+/*Content of the middle box*/
+/*Tags*/
+b {
+    font-family: "Times New Roman";
+    font-size: 1.1vw;
+}
+
+/* Full-width input fields */
+input[type=text]:not(.error), input[type=password] {
+    width: 97%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    font-family: "Times New Roman";
+    font-size: 1vw;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:not(.error):focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+/* createAccountForm*/
+.createAccountForm {
+  margin: 3% auto 3% auto; /* 3% from the top, 3% from the bottom and centered */
+  width: 95%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#employeeType {
+    padding: 2px;
+    font-family: "Times New Roman";
+    font-size: 1vw;
+}
+
+/* Change styles for cancel button and create button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelBtn, .createBtn {
+     width: 100%;
+  }
+}
+
+.cancelBtn, .cancelBtn:hover{
+    position: relative;
+    font-size: 1.25vw;
+    background-color: red;
+    color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 45%;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: "Times New Roman";
+    text-align: center;
+    outline: none;
+    box-shadow: 0 9px #999;
+    margin-top: 4%;
+}
+
+.cancelBtn:hover{
+    background-color: darkred;
+}
+
+.cancelBtn:active{
+    background-color: darkred;
+    box-shadow: 0 5px #666666;
+    transform: translateY(4px);
+}
+
+.createBtn, .createBtn:hover{
+    position: relative;
+    left: 10%;
+    font-size: 1.25vw;
+    background-color: green;
+    color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 45%;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: "Times New Roman";
+    text-align: center;
+    outline: none;
+    box-shadow: 0 9px #999;
+    margin-top: 4%;
+}
+
+.createBtn:hover{
+    background-color: darkgreen;
+}
+
+.createBtn:active{
+    background-color: darkgreen;
+    box-shadow: 0 5px #666666;
+    transform: translateY(4px);
+}
+
+#errorUsername {
+    position: relative;
+    display: block;
+    color: red;
+    font-size: 0.8vw;
+    width: 35%;
+    border-color: none;
+    border-width: 0px;
+    background-color: none;
+    left: 2.5%;
+    margin-bottom: 2%;
+    font-weight: bold;
+    font-family: "Times New Roman";
+}
+
+#errorUsername:focus {
+    outline: none;
+    cursor: default;
+}
+
+#errorPassword {
+    position: relative;
+    display: block;
+    color: red;
+    font-size: 0.8vw;
+    width: 30%;
+    border-color: none;
+    border-width: 0px;
+    background-color: none;
+    left: 2.5%;
+    margin-bottom: 2%;
+    font-weight: bold;
+    font-family: "Times New Roman";
+}
+
+#errorPassword:focus {
+    outline: none;
+    cursor: default;
+}

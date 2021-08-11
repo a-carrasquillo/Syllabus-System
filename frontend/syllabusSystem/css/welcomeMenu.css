@@ -1,0 +1,304 @@
+import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.menu-area li a {
+  text-decoration: none;
+}
+
+.menu-area li {
+  list-style-type: none;
+}
+
+.custom-padding{
+  padding-top: 25px;
+}
+
+nav {
+  position: fixed;
+  left:0.5%;
+  width: calc(100% - 60px);
+  margin: 0 auto;
+  padding: 10px 0;
+  background: rgb(220, 31, 51);
+  z-index: 1;
+  text-align: right;
+  padding-right: 2%;
+}
+
+.logo {
+    position: fixed;
+    margin-top: 1.7%;
+    margin-left: 4%;
+    width: 11%;
+    height: 9%;
+    float: left; 
+    border-radius: 15px;
+    z-index: 500;
+}
+
+.menu-area li {
+  display: inline-block;
+}
+
+/*<a> tag inside the menu area*/
+.menu-area a {
+    text-transform: uppercase;
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu-area a#activo:hover {
+    cursor: default;
+}
+
+.menu-area a:hover:after {
+  transform: translateY(-50%) rotate(-35deg);
+}
+
+.menu-area #activo { 
+    cursor: default;
+    border-bottom: 2px solid white;
+}
+
+nav:before {
+  position: absolute;
+  content: '';
+  border-top: 10px solid #333;
+  border-right: 10px solid #333;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  top: 100%;
+  left: 0;
+}
+
+nav:after {
+  position: absolute;
+  content: '';
+  border-top: 10px solid #333;
+  border-left: 10px solid #333;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  top: 100%;
+  right: 0;
+}
+
+/* The drop-down container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Drop-down button */
+.dropdown .dropbtn {
+    font-size: 16px;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.menu-area a:hover, .dropdown:hover .dropbtn {
+    background-color: lightslategray;
+    cursor: pointer;
+}
+
+/* Drop-down content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the drop-down */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to drop-down links on hover */
+.dropdown-content a:hover {
+  background-color: lightcoral;
+}
+
+/* Show the drop-down menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.blankpage{
+    position: relative;
+    margin-left: 15%;
+    margin-top: 8%;
+    min-height: 10%; /*min height so when more text is added, then it will resize height*/
+    width: 70%;
+    background-color: white;
+    border-radius: 5px;
+    border-color: darkred;
+    border-width: 10px;
+    border-style: solid;
+    padding-bottom: 1%;
+}
+
+h1 {
+    font-size: 50px;
+    position: relative;
+    margin-left: 2.5%;
+}
+
+/*Search Bar Section*/
+.search_bar {
+    width: 40%;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
+/* Style the search field */
+form#search input[type=text] {
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid grey;
+  float: left;
+  width: 60%;
+  background: #f1f1f1;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  font-family: "Times New Roman";
+}
+
+/* Style the submit search button */
+form#search button {
+    position: relative;
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+form#search button:hover {
+    background: #0b7dda;
+}
+
+/* Clear floats */
+form#search::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*end of code from w3schools for search box*/
+
+form#search input[type=text]:focus, form#search button:focus {
+    outline: none;
+}
+
+#myBtnContainer {
+    position: relative;
+}
+
+
+/* filter elements */
+.container {
+    overflow: hidden;
+    position: relative;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    left: 4.5%;
+    font-size: 14px;  
+    padding: 0.95em;
+    max-width: 1090px;
+    word-wrap: break-word;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    break-after:avoid-region;
+}
+
+.filterDiv {
+    float: left;
+    background-color: darkred;
+    color: #ffffff;
+    width: 140px;
+    line-height: 2;
+    text-align: center;
+    margin: 2px;
+    display: none; /* Hidden by default */     
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+    display: block;  
+}
+
+/* Style the buttons */
+.btn {
+    position: relative;
+    margin-top: 2%;
+    left: 5.7%;
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: darkgray;
+    cursor: pointer; 
+    font-size: 1vw;
+    font-family: "Times New Roman";
+}
+
+/* Add a light grey background on mouse-over */
+.btn:hover {
+    background-color: #ddd;
+}
+
+/* Add a dark background to the active button */
+.btn.active {
+    background-color: #666666;
+    color: white;
+}
+
+.programa {
+    font-size: 0.74vw;
+    font-family: "Times New Roman";
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    background-color: darkred;
+    color: #ffffff;
+    padding: 3%;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 3%;
+}

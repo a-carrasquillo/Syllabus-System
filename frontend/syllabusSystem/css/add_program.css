@@ -1,0 +1,281 @@
+import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.menu-area li a {
+  text-decoration: none;
+}
+
+.menu-area li {
+  list-style-type: none;
+}
+
+.custom-padding{
+  padding-top: 25px;
+}
+
+nav {
+  position: fixed;
+  left:0.5%;
+  width: calc(100% - 60px);
+  margin: 0 auto;
+  padding: 10px 0;
+  background: rgb(220, 31, 51);
+  z-index: 1;
+  text-align: right;
+  padding-right: 2%;
+}
+
+.logo {
+    position: fixed;
+    margin-top: 1.7%;
+    margin-left: 4%;
+    width: 11%;
+    height: 9%;
+    float: left; 
+    border-radius: 15px;
+    z-index: 500;
+}
+
+.menu-area li {
+  display: inline-block;
+}
+
+/*<a> tag inside the menu area*/
+.menu-area a {
+    text-transform: uppercase;
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu-area a:hover:after {
+  transform: translateY(-50%) rotate(-35deg);
+}
+
+.menu-area #activo { 
+    cursor: default;
+    border-bottom: 2px solid white;
+}
+
+.menu-area a#activo:hover {
+    cursor: default;
+}
+
+.dropdown-content a#activo { 
+    cursor: default;
+    background-color: lightcoral;
+    border-bottom: 0px solid white;
+}
+
+.dropdown-content #activo:hover {
+    cursor: default;
+}
+
+nav:before {
+  position: absolute;
+  content: '';
+  border-top: 10px solid #333;
+  border-right: 10px solid #333;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  top: 100%;
+  left: 0;
+}
+
+nav:after {
+  position: absolute;
+  content: '';
+  border-top: 10px solid #333;
+  border-left: 10px solid #333;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  top: 100%;
+  right: 0;
+}
+
+/* The drop-down container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Drop-down button */
+.dropdown .dropbtn {
+    font-size: 16px;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.menu-area a:hover, .dropdown:hover .dropbtn {
+    background-color: lightslategray;
+    cursor: pointer;
+}
+
+/* Drop-down content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the drop-down */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to drop-down links on hover */
+.dropdown-content a:hover {
+  background-color: lightcoral;
+}
+
+/* Show the drop-down menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.cuadro_centro {
+    position:absolute;
+    left: 25%;
+    top: 25%;
+    height: 33%;
+    width:45%;
+    background-color: white;
+    border-radius: 5px;
+    border-color: rgb(220, 31, 51);
+    border-width: 10px;
+    border-style: solid;
+}
+
+#program_tag {  
+    position:absolute;
+    left: 4.1%;
+    top:9.2%;
+    font-size: 1.25vw;
+    font-family: "Times New Roman", Times, serif;
+    cursor: default;
+}
+
+#program_name {
+    position: absolute;
+    left: 27.5%;
+    top:8.7%;
+    height: 12%;
+    width: 70%;
+    border: 1.5px solid #555;
+    font-size: 1.25vw;
+    font-family: "Times New Roman", Times, serif;
+}
+
+#academic_grade_tag {
+    position:absolute;
+    left: 4.1%;
+    top:30.2%;
+    font-size: 1.25vw;
+    font-family: "Times New Roman", Times, serif;
+    cursor: default;
+}
+
+form select {
+    position:absolute;
+    left: 27.5%;
+    top:30.2%;
+    width: 70%;
+    font-size: 1.25vw;
+    font-family: "Times New Roman", Times, serif;
+    cursor: pointer;
+    height: 12%;
+}
+
+#code_tag {
+    position:absolute;
+    left: 4.1%;
+    top:53.2%;
+    font-size: 1.25vw;
+    font-family: "Times New Roman", Times, serif;
+    cursor: default;
+}
+
+/*Program Code text field style*/
+#program_code {
+    position:absolute;
+    left: 30.5%;
+    top:51.5%;
+    height: 12%;
+    width: 67%;
+    border: 1.5px solid #555;
+    font-size: 1.25vw;
+    font-family: "Times New Roman", Times, serif;
+}
+
+/*Submit and cancel button style*/
+#submit, #submit:hover, #cancel, #cancel:hover {
+    position: relative;
+    margin-bottom: 5%;
+    margin-top: 27%;
+    left: 16%;
+    font-size: 1.25vw;
+    background-color: green;
+    color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 40%;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: "Times New Roman";
+    text-align: center;
+    outline: none;
+    box-shadow: 0 9px #999;
+}
+
+#submit:hover {
+    background-color: darkgreen;
+}
+
+#submit:active, #cancel:active {
+    background-color: darkgreen;
+    box-shadow: 0 5px #666666;
+    transform: translateY(4px); 
+}
+
+/*Cancel button style*/
+#cancel, #cancel:hover {
+    left: 4%;
+    background-color: red;
+}
+
+#cancel:hover {
+    background-color: darkred;
+}
+
+#cancel:active {
+    background-color: darkred;
+}
