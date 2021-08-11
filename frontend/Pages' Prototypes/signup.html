@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <!--Indicates the encoding of the characters-->
+        <meta charset="utf-8">
+        <!--Authors of the web page-->
+        <meta name="author" content="a-carrasquillo, arivesan">
+        <!--Importing the CSS style-sheet-->
+        <link rel = "stylesheet" type="text/css" href="css/signup.css">
+        <!--Website title-->
+        <title>Registro</title>
+        <!--Webpage description-->
+        <meta name="description" content="P&aacute;gina de registro para el portal de prontuarios de la divisi&oacute;n de educaci&oacute;n de la UAGM.">
+        <!--Script to validate the password with confirm password-->
+        <script>
+            function checkform() {
+                "use strict";
+                //Retrieving the password and the confirmation of the password
+                var pass = document.signup.psw.value;
+                var passConf = document.signup.psw_repeat.value;
+                //Verify if the password is not the same as the confirmation password
+                if(pass!==passConf) {
+                    //Show the error message
+                    document.getElementById("errorPassword").value = "Contrase&ntilde;as no coinciden!";
+                    document.signup.userPassConfirm.focus();
+                } else {
+                    //if the passwords are the same, empty the error message
+                    document.getElementById("errorPassword").value = "";
+                }
+                //if there is any kind of problem return false, else, true. 
+                if(pass!==passConf){
+                   return false;
+                } else {
+                    return true;   
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class ="franja"><!--top strip of page-->
+            <img id ="logo" src="images_icons/uni-logo.png" alt="Logo Ana G. Mendez">
+            <p id="mainname">Registro del Portal de Prontuarios</p>
+        </div>
+        <div class = "cuadro_centro">
+             <form class="createAccountForm" name="signup" action="createAccount.jsp" method="post" autocomplete="off">
+                <h1>Crear una cuenta</h1>
+                <h4>Complete este formulario para crear una cuenta.</h4>
+                <hr>
+                <label for="name"><b>Nombre</b></label>
+                <input type="text" placeholder="Escriba su nombre..." name="name" required>
+
+                <label for="lastName"><b>Apellidos</b></label>
+                <input type="text" placeholder="Ingrese sus apellidos..." name="lastName" required>
+
+                <label for="userName"><b>Nombre de usuario</b></label>
+                <input type="text" placeholder="Ingrese su nombre de usuario..." name="userName" required>
+                    <!--Error message-->
+                    <input type="text" class="error" id="errorUsername" name="errorUsername" readonly value="El nombre de usuario ya existe. Use otro.">
+                <label for="psw"><b>Contrase&ntilde;a</b></label>
+                <input type="password" placeholder="Ingrese una contrase&ntilde;a..." name="psw" required>
+
+                <label for="psw_repeat"><b>Confirmar contrase&ntilde;a</b></label>
+                <input type="password" placeholder="Confirme su contrase&ntilde;a..." name="psw_repeat" required oninput ="checkform()">
+                    <!--Error message-->
+                    <input type="text" class="error" id="errorPassword" name="errorPassword" readonly value="">
+                <label for="selectPos"><b>Seleccione su puesto</b></label>
+                <select name="selectPos" id = "employeeType" required>
+                    <option value = "" >Seleccione...</option>
+                    <option value = "1">Profesor</option>
+                    <option value = "2">Empleado</option>
+                </select>
+
+                <div class="clearfix">
+                    <button type="button" onclick="window.location.href='login.html';" class="cancelBtn">Cancelar</button>
+                    <button type="submit" class="createBtn" onclick="return checkform();">Reg&iacute;strate</button>
+                </div>
+            </form> 
+        </div>
+    </body>
+</html>

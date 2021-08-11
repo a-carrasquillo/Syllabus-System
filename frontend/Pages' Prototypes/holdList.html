@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!--Indicates the encoding of the characters-->
+        <meta charset="utf-8">
+        <!--Authors of the web page-->
+        <meta name="author" content="a-carrasquillo, arivesan">
+        <!--Importing the CSS style-sheet-->
+        <link rel = "stylesheet" type="text/css" href="css/holdList.css">
+        <!--Importing JS required-->
+        <script src="https://kit.fontawesome.com/7ea556f8eb.js" crossorigin="anonymous"></script>
+        <!--Website title-->
+        <title>Prontuarios Retenidos</title>
+        <!--CSS required for the background picture-->
+        <style type="text/css">
+            body {
+              background-image: url(images_icons/esc_educacion2.JPG);
+              -webkit-background-size:cover;
+              background-size:cover;
+              background-position: center center;
+              height: 100vh;
+              background-repeat: no-repeat;
+              background-attachment: fixed;  
+            }
+        </style>
+    </head>
+    <body>
+        <img class ="logo" src="images_icons/uni-logo.png" alt="Logo Ana G. Mendez">
+        <!--Menu begins here-->
+        <div class="custom-padding">
+          <nav>
+            <ul class="menu-area">
+                <b>
+                    <li><a href="welcomeMenu.html">Home</a></li>
+                    <li><a href="pendingRequestStatus.html">Estado de solicitudes</a></li>
+	                <li><a href="holdList.html" id="activo">Lista de prontuarios retenidos</a></li>
+	                <li><a href="searchNewCourse.html">Lista de Cursos sin prontuarios</a></li>
+                    <li><a href="help.html">Ayuda</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                </b>
+            </ul>
+          </nav>
+        </div><!--Menu ends here-->
+        
+        <div class = "cuadro_centro">
+            <h1>Prontuarios:</h1>
+            <table>
+                <tr>
+                    <th>Nivel</th>
+                    <th>C&oacute;digo del curso</th>
+                    <th>Estatus</th>
+                    <th>Fecha de Solicitud</th>
+                    <th>Remover</th>
+                </tr>
+                <tr>
+                    <td><button class="info">Bachillerato</button></td>
+                    <td><button class="info">CPEN-450</button></td>
+                    <td><button class="info">Pendiente</button></td>
+                    <td><button class="info">11/04/2020</button></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><button class="info">Bachillerato</button></td>
+                    <td><button class="info">CPEN-350</button></td>
+                    <td><button class="info">Denegado</button></td>
+                    <td><button class="info">11/04/2020</button></td>
+                    <form action="statusSeen.jsp" method="post">
+                        <td><input type="checkbox" onclick="form.submit();" class="check" name="requestId" value="id#"></td>
+                    </form>
+                </tr>
+                <tr>
+                    <form action="courseSyllabusPreview.jsp" method="post">
+                        <input type="hidden" name="courseCode" value="courseCode#">
+                        <td><button type="submit" class="info">Bachillerato</button></td>
+                        <td><button type="submit" class="info">CPEN-250</button></td>
+                        <td><button type="submit" class="info">Aprovado</button></td>
+                        <td><button type="submit" class="info">11/04/2020</button></td>
+                        <td></td>
+                    </form>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <!--Indicates the encoding of the characters-->
+        <meta charset="utf-8">
+        <!--Authors of the web page-->
+        <meta name="author" content="a-carrasquillo, arivesan">
+        <!--Importing the CSS style-sheet-->
+        <link rel = "stylesheet" type="text/css" href="css/searchCourseCode.css">
+        <!--Importing JS required-->
+        <script src="https://kit.fontawesome.com/7ea556f8eb.js" crossorigin="anonymous"></script>
+        <!--Website title-->
+        <title>Resultados de la B&uacute;squeda</title>
+        <!--CSS required for the background picture-->
+        <style type="text/css">
+            body {
+              background-image: url(images_icons/esc_educacion2.JPG);
+              -webkit-background-size:cover;
+              background-size:cover;
+              background-position: center center;
+              height: 100vh;
+              background-repeat: no-repeat;
+              background-attachment: fixed;  
+            }
+        </style>
+    </head>
+    <body>
+        <img class ="logo" src="images_icons/uni-logo.png" alt="Logo Ana G. Mendez">
+        <!--Menu begins here-->
+        <div class="custom-padding">
+          <nav>
+            <ul class="menu-area">
+                <b>
+                    <li><a href="welcomeMenu.html">Home</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Añadir
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="addProgram.html">Programa</a>
+                                <a href="addNewCourse.html">Curso</a>
+                                <a href="addCourseToProgram.html">Cursos a Programas</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Reglas
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="addRules.html">Añadir Regla</a>
+                                <a href="listRules.html">Lista de Reglas</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Listas
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="changeReqList.html">Solicitudes de Cambio o Creación</a>
+                                <a href="holdSyllabusList.html">Prontuarios para Revisar</a>
+                                <a href="userChargeList.html">Permisos de los Usuarios</a>
+                                <a href="userAdminPrivList.html">Administradores Temporeros</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="login.html">Logout</a></li>
+                </b>
+            </ul>
+          </nav>
+        </div><!--Menu ends here-->
+        
+        <div class = "blankpage">
+            <h1>Resultados de la B&uacute;squeda de Prontuarios:</h1>
+            
+            <!--<h2>No hay resultados para su b&uacute;squeda. Regrese a Home e intente de nuevo.</h2>-->
+            
+            <form action="courseSyllabusPreview.jsp" method="post">
+                <input type="hidden" name="courseCode" value="courseCode1">
+                <button type="submit" class="course">EDUC 106</button>
+            </form>
+            <form action="courseSyllabusPreview.jsp" method="post">
+                <input type="hidden" name="courseCode" value="courseCode2">
+                <button type="submit" class="course">EDUC 123</button>
+            </form>
+            <form action="courseSyllabusPreview.jsp" method="post">
+                <input type="hidden" name="courseCode" value="courseCode3">
+                <button type="submit" class="course">EDUC 171</button>
+            </form>
+            <form action="courseSyllabusPreview.jsp" method="post">
+                <input type="hidden" name="courseCode" value="courseCode4">
+                <button type="submit" class="course">EDUC 172</button>
+            </form>
+            <form action="courseSyllabusPreview.jsp" method="post">
+                <input type="hidden" name="courseCode" value="courseCode5">
+                <button type="submit" class="course">EDUC 444</button>
+            </form>
+            <form action="courseSyllabusPreview.jsp" method="post">
+                <input type="hidden" name="courseCode" value="courseCode6">
+                <button type="submit" class="course">EDVI 449</button>
+            </form>
+            <form action="courseSyllabusPreview.jsp" method="post">
+                <input type="hidden" name="courseCode" value="courseCode7">
+                <button type="submit" class="course">PHED 447</button>
+            </form>
+        </div> 
+    </body>
+</html>

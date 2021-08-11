@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!--Indicates the encoding of the characters-->
+        <meta charset="utf-8">
+        <!--Authors of the web page-->
+        <meta name="author" content="a-carrasquillo, arivesan">
+        <!--Importing the CSS style-sheet-->
+        <link rel = "stylesheet" type="text/css" href="css/requestEdition.css">
+        <!--Importing JS required-->
+        <script src="https://kit.fontawesome.com/7ea556f8eb.js" crossorigin="anonymous"></script>
+        <!--Website title-->
+        <title>Solicitud de Edici&oacute;n</title>
+        <!--CSS required for the background picture-->
+        <style type="text/css">
+            body {
+              background-image: url(images_icons/esc_educacion2.JPG);
+              -webkit-background-size:cover;
+              background-size:cover;
+              background-position: center center;
+              height: 100vh;
+              background-repeat: no-repeat;
+              background-attachment: fixed;  
+            }
+        </style>
+    </head>
+    <body>
+        <img class ="logo" src="images_icons/uni-logo.png" alt="Logo Ana G. Mendez">
+        <!--Menu begins here-->
+        <div class="custom-padding">
+          <nav>
+            <ul class="menu-area">
+                <b>
+                    <li><a href="welcomeMenu.html">Home</a></li>
+                    <li><a href="pendingRequestStatus.html">Estado de solicitudes</a></li>
+	                <li><a href="holdList.html">Lista de prontuarios retenidos</a></li>
+	                <li><a href="searchNewCourse.html">Lista de Cursos sin prontuarios</a></li>
+                    <li><a href="help.html">Ayuda</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                </b>
+            </ul>
+          </nav>
+        </div><!--Menu ends here-->
+        
+        <div class = "cuadro_centro">
+            <form action = 'processRequest.jsp' method="post">
+                <h1>Solicitud de Edición</h1>
+                <div id = "editionCourse_tag">Curso que se está solicitando edición de prontuario:</div>
+                <input type="text" id="editionCourse_name" name="courseCode" value="EDUC-123" readonly>
+                
+                <div id = "propositoSolicitud_tag">Propósito de la Solicitud:</div>
+                <textarea type="text" id="propositoSolicitud_name" name="requestPurpose" rows = "4" cols = "75" placeholder="Escriba el propósito de su solicitud..." required></textarea>
+                                
+                <div><div id = "tiempoSolicitud_tag">Tiempo Solicitado:</div>
+                <input type="date" id="tiempoSolicitud_name" name="timeRequested" required></div>
+                
+                <button id ="cancel" type="button" onclick="window.location.href='cancelRequestEdition.jsp';">Cancelar</button>
+                <button id ="submit" type="submit">Someter</button>
+            </form>
+        </div>
+    </body>
+</html>
