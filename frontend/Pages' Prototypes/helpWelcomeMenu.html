@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <!--Indicates the encoding of the characters-->
+        <meta charset="utf-8">
+        <!--Authors of the web page-->
+        <meta name="author" content="a-carrasquillo, arivesan">
+        <!--Importing the CSS style-sheet-->
+        <link rel = "stylesheet" type="text/css" href="css/help.css">
+        <!--Importing JS required-->
+        <script src="https://kit.fontawesome.com/7ea556f8eb.js" crossorigin="anonymous"></script>
+        <!--Website title-->
+        <title>Ayuda</title>
+        <!--CSS required for the background picture-->
+        <style type="text/css">
+            body {
+              background-image: url(images_icons/esc_educacion2.JPG);
+              -webkit-background-size:cover;
+              background-size:cover;
+              background-position: center center;
+              height: 100vh;
+              background-repeat: no-repeat;
+              background-attachment: fixed;  
+            }
+        </style>
+    </head>
+    <body>
+        <img class ="logo" src="images_icons/uni-logo.png" alt="Logo Ana G. Mendez">
+        <div class="custom-padding">
+          <nav>
+            <ul class="menu-area">
+                <b>
+                    <li><a href="welcomeMenu.html">Home</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">A&ntilde;adir
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="addProgram.html">Programa</a>
+                                <a href="addNewCourse.html">Curso</a>
+                                <a href="addCourseToProgram.html">Cursos a Programas</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Reglas
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="addRules.html">A&ntilde;adir Regla</a>
+                                <a href="listRules.html">Lista de Reglas</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Listas
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="changeReqList.html">Solicitudes de Cambio o Creaci&oacute;n</a>
+                                <a href="holdSyllabusList.html">Prontuarios para Revisar</a>
+                                <a href="userChargeList.html">Permisos de los Usuarios</a>
+                                <a href="userAdminPrivList.html">Administradores Temporeros</a>
+                                <a href="searchNewCourse.html">Lista de Cursos Nuevos</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a id="activo">Ayuda</a></li>
+                    <li><a href="signout.jsp">Logout</a></li>
+                </b>
+            </ul>
+          </nav>
+        </div>
+        <div class = "blankpage">
+            <h1>Ayuda sobre la p&aacute;gina principal:</h1>
+            <p>En la barra de b&uacute;squeda se puede escribir el c&oacute;digo de un curso parcialmente o en su totalidad. Del mismo modo, se pude escribir el t&iacute;tulo de un curso de forma parcial o en su totalidad. Al escribir de forma parcial se pueden obtener m&aacute;s de un resultado. Por ejemplo, si escribe en la barra de b&uacute;squeda "ed", como resultado puede obtener cursos que como parte de su c&oacute;digo de curso tengan las letras "ed" en alg&uacute;n lugar de su c&oacute;digo, o incluso en su t&iacute;tulo pero de forma consecutiva, es decir, que la “e” y la “d” deben estar juntas y sin espacios entre ellas.</p>
+            <p>Ahora se explicar&aacute; la b&uacute;squeda a trav&eacute;s de los programas. Como se muestra en las fotos a continuaci&oacute;n, existen varios filtros. El primero de estos siendo "Mostrar Todos" con el cual podemos ver todos los programas que se encuentran en el sistema. A continuaci&oacute;n, se encuentran los filtros "Bachillerato", "Maestr&iacute;a", y "Doctorado", los cuales como sus nombres indican, muestran los programas pertenecientes al bachillerato, maestr&iacute;a, y al doctorado respectivamente. Es importante recalcar que le debe dar "click" sobre el nombre del programa para ver los cursos que estos poseen.</p>
+            <img id="programfilterPic1" src="images_icons/programsFilterHelp1.JPG" alt="Foto mostrando los resultados del primer filtro de programas.">
+            <img id="programfilterPic2" src="images_icons/programsFilterHelp2.JPG" alt="Foto mostrando los resultados del segundo filtro de programas.">
+            <img id="programfilterPic3" src="images_icons/programsFilterHelp3.JPG" alt="Foto mostrando los resultados del tercer filtro de programas.">
+            <img id="programfilterPic4" src="images_icons/programsFilterHelp4.JPG" alt="Foto mostrando los resultados del cuarto filtro de programas.">
+            
+            <!--Back Button-->
+            <button id = "backBtn" type="button" onclick="window.location.href='welcomeMenu.html';">Volver a la p&aacute;gina anterior</button>
+        </div><!--Blankpage closing div tag--> 
+    </body>
+</html>

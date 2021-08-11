@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <!--Indicates the encoding of the characters-->
+        <meta charset="utf-8">
+        <!--Authors of the web page-->
+        <meta name="author" content="a-carrasquillo, arivesan">
+        <!--Importing the CSS style-sheet-->
+        <link rel = "stylesheet" type="text/css" href="css/help.css">
+        <!--Importing JS required-->
+        <script src="https://kit.fontawesome.com/7ea556f8eb.js" crossorigin="anonymous"></script>
+        <!--Website title-->
+        <title>Ayuda</title>
+        <!--CSS required for the background picture-->
+        <style type="text/css">
+            body {
+              background-image: url(images_icons/esc_educacion2.JPG);
+              -webkit-background-size:cover;
+              background-size:cover;
+              background-position: center center;
+              height: 100vh;
+              background-repeat: no-repeat;
+              background-attachment: fixed;  
+            }
+        </style>
+    </head>
+    <body>
+        <img class ="logo" src="images_icons/uni-logo.png" alt="Logo Ana G. Mendez">
+        <div class="custom-padding">
+          <nav>
+            <ul class="menu-area">
+                <b>
+                    <li><a href="welcomeMenu.html">Home</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">A&ntilde;adir
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="addProgram.html">Programa</a>
+                                <a href="addNewCourse.html">Curso</a>
+                                <a href="addCourseToProgram.html">Cursos a Programas</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Reglas
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="addRules.html">A&ntilde;adir Regla</a>
+                                <a href="listRules.html">Lista de Reglas</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Listas
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="changeReqList.html">Solicitudes de Cambio o Creaci&oacute;n</a>
+                                <a href="holdSyllabusList.html">Prontuarios para Revisar</a>
+                                <a href="userChargeList.html">Permisos de los Usuarios</a>
+                                <a href="userAdminPrivList.html">Administradores Temporeros</a>
+                                <a href="searchNewCourse.html">Lista de Cursos Nuevos</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a id="activo">Ayuda</a></li>
+                    <li><a href="signout.jsp">Logout</a></li>
+                </b>
+            </ul>
+          </nav>
+        </div>
+        <div class = "blankpage">
+            <h1>Ayuda sobre la creaci&oacute;n de prontuarios:</h1>
+            <p>En la foto mostrada a continuaci&oacute;n se puede ver cinco (5) datos sobre el prontuario. Dichos datos no pueden ser alterados, de haber la necesidad de cambiarlos debe comunicarse con la persona que tenga acceso a la base de datos del sistema para que dicha persona pueda realizar los cambios correspondientes.</p>
+            <img id="createSyllabus1" src="images_icons/createSyllabusHelp1.JPG" alt="Foto de ejemplo sobre los primeros cinco datos del prontuario.">
+            
+            <p>Segundo, relacionado con los prerrequisitos, y correquisitos, de haber m&aacute;s de uno (1) se deben separar por comas (,) y si no tiene ning&uacute;n prerrequisito o correquisito el encasillado debe dejarse en blanco. A continuaci&oacute;n, se muestra un ejemplo con dos prerrequisitos y un correquisito. Cabe destacar que si uno o m&aacute;s de dichos c&oacute;digos no se encuentran en la base de datos se generar&aacute; un error que ser&aacute; notificado por el sistema y se le dar&aacute; la oportunidad de arreglar el o los c&oacute;digos de curso.</p>
+            <img id="createSyllabus2" src="images_icons/createSyllabusHelp2.JPG" alt="Foto de ejemplo sobre los prerrequisitos y correquisitos.">
+            
+            <p>La duraci&oacute;n del curso puede escribirse de la forma deseada, dicho encasillado acepta n&uacute;meros, letras y caracteres especiales. Para el dato relacionado con los cr&eacute;ditos del curso es el mismo caso expuesto anteriormente. Por otro lado, cabe destacar que la descripci&oacute;n del curso y la justificaci&oacute;n acepta uno o varios p&aacute;rrafos.</p>
+            
+            <p>Con respecto a los objetivos, primero, como se indica en la foto, se debe marcar las agencias que aplican. Por el momento, el sistema solo cuenta con la agencia denominada CAEP. El segundo paso es llenar la informaci&oacute;n relacionada con el primer objetivo. Una vez se llena la informaci&oacute;n del objetivo, se procede a alinear el objetivo con los est&aacute;ndares seleccionados, por el momento, CAEP. En la regi&oacute;n enumerada como tres (3) se selecciona el est&aacute;ndar a a&ntilde;adir, se van seleccionando uno a la vez. Para a&ntilde;adirlo se debe presionar el bot&oacute;n de "A&ntilde;adir", el cual como se muestra en la foto se encuentra en la regi&oacute;n identificada como cuatro (4). En dicha regi&oacute;n tambi&eacute;n se encuentra el bot&oacute;n "Remover" el cual, como su nombre indica, se utiliza para remover el est&aacute;ndar seleccionado en la caja tres (3) del encasillado enumerado como cinco (5). El proceso para a&ntilde;adir los est&aacute;ndares al encasillado cinco (5) se puede repetir hasta culminar de a&ntilde;adir todos los est&aacute;ndares necesarios.</p>
+            <p>Por otro lado, para los objetivos dos (2) en adelante, primero se deben a&ntilde;adir todos los encasillados necesarios utilizando el bot&oacute;n de "A&ntilde;adir Objetivo", mostrado en la regi&oacute;n enumerada como seis (6). Esto se debe a que el contenido de los encasillados se borrar&aacute; al a&ntilde;adir m&aacute;s objetivos. Por ejemplo, si el prontuario va a contener cinco (5) objetivos, una vez se introduzca la informaci&oacute;n del primer objetivo, se debe presionar el bot&oacute;n de "A&ntilde;adir Objetivo" cuatro (4) veces para que as&iacute; aparezcan los encasillados de los objetivos dos (2) al cinco (5). Si se pasa de cantidad de objetivos, puede presionar el bot&oacute;n de "Remover Objetivo" y el mismo le permitir&aacute; remover los &uacute;ltimos encasillados dedicados al ultimo objetivo. Por &uacute;ltimo, para los objetivos del dos (2) en adelante se repiten los pasos indicados para el primer objetivo para llenar su informaci&oacute;n correspondiente.</p>
+            <img id="createSyllabus3" src="images_icons/createSyllabusHelp3.JPG" alt="Foto de ejemplo sobre los objetivos y su alineaci&oacute;n">
+            
+            <p>Antes de llenar la informaci&oacute;n relacionada con el contenido tem&aacute;tico se debe presionar el bot&oacute;n de "A&ntilde;adir Contenido tem&aacute;tico", como se muestra en la foto a continuaci&oacute;n. Esto se debe a que, si se llena la informaci&oacute;n del segundo contenido tem&aacute;tico y luego se presiona el bot&oacute;n de a&ntilde;adir para agregar el tercer contenido tem&aacute;tico, la informaci&oacute;n del segundo contenido tem&aacute;tico se perder&aacute;. Por esta raz&oacute;n se debe a&ntilde;adir todos los encasillados requeridos antes de empezar a llenar la informaci&oacute;n. Si se diera el caso de que a&ntilde;adi&oacute; encasillados de m&oacute;s, puede presionar el bot&oacute;n de "Remover Contenido tem&aacute;tico", el cual va a remover el &uacute;ltimo encasillado.</p>
+            <img id="createSyllabus4" src="images_icons/createSyllabusHelp4.JPG" alt="Foto de ejemplo sobre el Contenido tem&aacute;tico.">
+            
+            <p>Para la informaci&oacute;n de las estrategias de ense&ntilde;anza, con respecto a la adici&oacute;n de encasillados, es el mismo caso presentado previamente. Por su parte, difiere en que se pueden mostrar opciones a escoger al presionar el tri&aacute;ngulo que se muestra en la foto a continuaci&oacute;n. Se mostrar&aacute;n opciones si la base de datos contiene informaci&oacute;n al respecto. Cuando se escribe una opci&oacute;n que no esta siendo mostrada, dicha opci&oacute;n o informaci&oacute;n ser&aacute; a&ntilde;adida a la base de datos para uso futuro.</p>
+            <img id="createSyllabus5" src="images_icons/createSyllabusHelp5.JPG" alt="Foto de ejemplo sobre las estrategias de ense&ntilde;anza.">
+            
+            <p>Las estrategias de assessment se trabajan del mismo modo que las estrategias de ense&ntilde;anza y las opciones a escoger se comportan del mismo modo.</p>
+            <img id="createSyllabus6" src="images_icons/createSyllabusHelp6.JPG" alt="Foto de ejemplo sobre las estrategias de assessment.">
+            
+            <p>Por &uacute;ltimo, la informaci&oacute;n relacionada al libro de texto, la bibliograf&iacute;a, y los recursos en l&iacute;nea se trabaja de la misma manera que el contenido tem&aacute;tico. Con respecto a las reglas, se pueden marcar todas las reglas que apliquen al curso, pero al menos se debe seleccionar una.</p>
+            <img id="createSyllabus7" src="images_icons/createSyllabusHelp7.JPG" alt="Foto de ejemplo sobre el/los libros de texto, la/las bibliograf&iacute;as, el/los recursos en l&iacute;nea, y las reglas del curso.">
+            
+            <!--Back Button-->
+            <button id = "backBtn" type="button" onclick="window.location.href='createSyllabus.html';">Volver a la p&aacute;gina anterior</button>
+        </div><!--Blankpage closing div tag--> 
+    </body>
+</html>

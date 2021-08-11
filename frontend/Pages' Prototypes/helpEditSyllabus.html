@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <!--Indicates the encoding of the characters-->
+        <meta charset="utf-8">
+        <!--Authors of the web page-->
+        <meta name="author" content="a-carrasquillo, arivesan">
+        <!--Importing the CSS style-sheet-->
+        <link rel = "stylesheet" type="text/css" href="css/help.css">
+        <!--Importing JS required-->
+        <script src="https://kit.fontawesome.com/7ea556f8eb.js" crossorigin="anonymous"></script>
+        <!--Website title-->
+        <title>Ayuda</title>
+        <!--CSS required for the background picture-->
+        <style type="text/css">
+            body {
+              background-image: url(images_icons/esc_educacion2.JPG);
+              -webkit-background-size:cover;
+              background-size:cover;
+              background-position: center center;
+              height: 100vh;
+              background-repeat: no-repeat;
+              background-attachment: fixed;  
+            }
+        </style>
+    </head>
+    <body>
+        <img class ="logo" src="images_icons/uni-logo.png" alt="Logo Ana G. Mendez">
+        <div class="custom-padding">
+          <nav>
+            <ul class="menu-area">
+                <b>
+                    <li><a href="welcomeMenu.html">Home</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">A&ntilde;adir
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="addProgram.html">Programa</a>
+                                <a href="addNewCourse.html">Curso</a>
+                                <a href="addCourseToProgram.html">Cursos a Programas</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Reglas
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="addRules.html">A&ntilde;adir Regla</a>
+                                <a href="listRules.html">Lista de Reglas</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Listas
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="changeReqList.html">Solicitudes de Cambio o Creaci&oacute;n</a>
+                                <a href="holdSyllabusList.html">Prontuarios para Revisar</a>
+                                <a href="userChargeList.html">Permisos de los Usuarios</a>
+                                <a href="userAdminPrivList.html">Administradores Temporeros</a>
+                                <a href="searchNewCourse.html">Lista de Cursos Nuevos</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a id="activo">Ayuda</a></li>
+                    <li><a href="signout.jsp">Logout</a></li>
+                </b>
+            </ul>
+          </nav>
+        </div>
+        <div class = "blankpage">
+            <h1>Ayuda sobre la edici&oacute;n de prontuarios:</h1>
+            <p>Al igual que con la creaci&oacute;n de prontuarios, en la edici&oacute;n no se pueden alterar los datos relacionados con el c&oacute;digo, el t&iacute;tulo, el tipo, la modalidad y el nivel del curso. Si se desea cambiar uno de estos aspectos se deben comunicar con la persona encargada de manejar la base de datos.</p>
+            <img id="editSyllabus1" src="images_icons/editSyllabusHelp1.JPG">
+            
+            <p>En el caso de no tener prerrequisitos y/o correquisitos se mostrar&aacute; "N/A" en el/los encasillados correspondientes. A diferencia de la creaci&oacute;n de prontuarios que no permite que el encasillado contenga valores si no aplica, en este caso el "N/A", en la edici&oacute;n se puede dejar el valor y no afecta el procesamiento de informaci&oacute;n. Del mismo modo, los encasillados se pueden dejar en blanco sino aplican. Por &uacute;ltimo, al igual que en la creaci&oacute;n de prontuarios, los c&oacute;digos de curso se separan por comas (,).</p>
+            <img id="editSyllabus2" src="images_icons/editSyllabusHelp2.JPG">
+            
+            <p>Con respecto a la duraci&oacute;n, la cantidad de cr&eacute;ditos, la descripci&oacute;n del curso, y la justificaci&oacute;n, solo basta con seleccionar su contenido y modificarlo seg&uacute;n corresponda. Recuerde que en la descripci&oacute;n y la justificaci&oacute;n del curso el contenido se puede separar en p&aacute;rrafos de ser necesario.</p>
+            <img id="editSyllabus3" src="images_icons/editSyllabusHelp3.JPG">
+            
+            <p>A continuaci&oacute;n, se explicar&aacute; los distintos aspectos que se pueden modificar de los objetivos del curso. Primero, se pueden a&ntilde;adir objetivos presionando el bot&oacute;n de "A&ntilde;adir Objetivo", y al igual que en la creaci&oacute;n de prontuarios, se debe a&ntilde;adir la totalidad de nuevos objetivos antes de comenzar a llenar su descripci&oacute;n y alinearlos con los est&aacute;ndares correspondientes. Similarmente, se pueden eliminar la cantidad de objetivos, recordando que se eliminar&aacute; el objetivo m&aacute;s reciente. Por ejemplo, si se posee diez (10) objetivos y se presiona el bot&oacute;n de "Remover Objetivo", el objetivo removido ser&aacute; el numero diez (10).</p>
+            <p>Segundo, la descripci&oacute;n de los objetivos ya existentes se puede editar. Del mismo modo, en la alineaci&oacute;n de est&aacute;ndares, se puede a&ntilde;adir est&aacute;ndares o eliminar uno o varios de los existentes. Recordando que el est&aacute;ndar a a&ntilde;adir o remover debe de estar seleccionado en la caja que dice "Seleccione un est&aacute;ndar" que corresponda al objetivo que su alineamiento est&aacute; siendo modificado.</p>
+            <img id="editSyllabus4" src="images_icons/editSyllabusHelp4.JPG">
+            
+            <p>En el caso del contenido tem&aacute;tico, la descripci&oacute;n actual puede ser modificada. Adem&aacute;s, se pueden a&ntilde;adir m&aacute;s encasillados para agregar contenido tem&aacute;tico. Cabe destacar, que si se desean a&ntilde;adir m&aacute;s de un encasillado se debe a&ntilde;adir todos los encasillados correspondientes antes de empezar a llenar su descripci&oacute;n porque al agregar encasillados se borra el contenido de los que fueron a&ntilde;adidos a trav&eacute;s del bot&oacute;n para dicho prop&oacute;sito. Por otro lado, para eliminar encasillados, basta con presionar el bot&oacute;n "Remover Contenido tem&aacute;tico", teniendo en cuenta de que se eliminar&aacute; el contenido m&aacute;s reciente. Por ejemplo, si se posee cinco (5) contenidos tem&aacute;ticos y se presiona el bot&oacute;n para remover, el contenido que ser&aacute; removido es el n&uacute;mero cinco (5).</p>
+            <img id="editSyllabus5" src="images_icons/editSyllabusHelp5.JPG">
+            
+            <p>A continuaci&oacute;n, la informaci&oacute;n de las estrategias de ense&ntilde;anza se puede modificar de varias maneras. La primera siendo la cantidad de estrategias de ense&ntilde;anza. Para esto, podemos presionar el bot&oacute;n de "A&ntilde;adir estrategia" para a&ntilde;adir m&aacute;s encasillados. Por el otro lado, podemos presionar el bot&oacute;n de "Remover estrategia" con el cual removemos la estrategia m&aacute;s reciente. Es decir, si tenemos tres (3) estrategias y presionamos remover, la estrategia que ser&aacute; eliminada ser&aacute; el n&uacute;mero tres (3). Segundo, el contenido de las estrategias actuales puede ser modificado. Por ejemplo, en las fotos mostradas a continuaci&oacute;n podemos ver que si eliminamos el contenido de la primera estrategia se pueden ver m&aacute;s opciones que se encuentren en el sistema. Cabe destacar que se pueden escribir opciones que no se encuentren en la lista, el sistema se encargara de a&ntilde;adirlo y tenerlo disponible para uso futuro. Del mismo modo, si no se borra la totalidad del contenido del encasillado no se podr&aacute; mostrar todas las opciones disponibles, ya que seg&uacute;n lo que est&eacute; escrito en el encasillado se busca en la lista las opciones que concuerden con lo escrito. Por ejemplo, si dejan escrito "Pre", el sistema solo mostrar&aacute; las opciones que comiencen con "Pre". Por ende, si se desea m&aacute;s opciones se debe de eliminar todo el contenido del encasillado a modificar y luego seleccionar el tri&aacute;ngulo para que as&iacute; se muestren todas las opciones disponibles.</p>
+            <img id="editSyllabus6" src="images_icons/editSyllabusHelp6.JPG">
+            <img id="editSyllabus7" src="images_icons/editSyllabusHelp7.png">
+            
+            <p>Para las estrategias de assessment se trabaja de forma similar a las estrategias de ense&ntilde;anza que se describi&oacute; anteriormente.</p>
+            <img id="editSyllabus8" src="images_icons/editSyllabusHelp8.JPG">
+            <img id="editSyllabus9" src="images_icons/editSyllabusHelp9.png">
+            
+            <p>En lo que respecta a los libros de texto, las bibliograf&iacute;as, y los recursos en l&iacute;nea, los mismos se pueden modificar de dos (2) manera. La primera siendo en cantidad, para lo cual podemos presionar el bot&oacute;n de a&ntilde;adir que corresponda a la informaci&oacute;n que deseamos a&ntilde;adir encasillados. Del mismo modo, podemos presionar el bot&oacute;n de remover para eliminar el encasillado m&aacute;s reciente. Segundo, podemos modificar el contenido de los encasillados ya existentes. Por ejemplo, la versi&oacute;n de un libro, el enlace del recurso en l&iacute;nea, entre otros casos.</p>
+            <p>Por &uacute;ltimo, las reglas se modifican seleccionando o desmarcando los t&iacute;tulos de las reglas. De este modo, se altera que reglas aplican al curso. Por otro lado, si se desea modificar el contenido de la regla en s&iacute;, se debe ir a la lista de reglas existentes y seleccionar el t&iacute;tulo de la regla a modificar para as&iacute; acceder a la p&aacute;gina que nos permite modificar el t&iacute;tulo y la descripci&oacute;n de una regla.</p>
+            <img id="editSyllabus10" src="images_icons/editSyllabusHelp10.JPG">
+            
+            <!--Back Button-->
+            <button id = "backBtn" type="button" onclick="window.location.href='editSyllabus.html';">Volver a la p&aacute;gina anterior</button>
+        </div><!--Blankpage closing div tag--> 
+    </body>
+</html>

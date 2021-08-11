@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <!--Indicates the encoding of the characters-->
+        <meta charset="utf-8">
+        <!--Authors of the web page-->
+        <meta name="author" content="a-carrasquillo, arivesan">
+        <!--Importing the CSS style-sheet-->
+        <link rel = "stylesheet" type="text/css" href="css/help.css">
+        <!--Importing JS required-->
+        <script src="https://kit.fontawesome.com/7ea556f8eb.js" crossorigin="anonymous"></script>
+        <!--Website title-->
+        <title>Ayuda</title>
+        <!--CSS required for the background picture-->
+        <style type="text/css">
+            body {
+              background-image: url(images_icons/esc_educacion2.JPG);
+              -webkit-background-size:cover;
+              background-size:cover;
+              background-position: center center;
+              height: 100vh;
+              background-repeat: no-repeat;
+              background-attachment: fixed;  
+            }
+        </style>
+    </head>
+    <body>
+        <img class ="logo" src="images_icons/uni-logo.png" alt="Logo Ana G. Mendez">
+        <div class="custom-padding">
+          <nav>
+            <ul class="menu-area">
+                <b>
+                    <li><a href="welcomeMenu.html">Home</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">A&ntilde;adir
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="addProgram.html">Programa</a>
+                                <a href="addNewCourse.html">Curso</a>
+                                <a href="addCourseToProgram.html">Cursos a Programas</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Reglas
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="addRules.html">A&ntilde;adir Regla</a>
+                                <a href="listRules.html">Lista de Reglas</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Listas
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="changeReqList.html">Solicitudes de Cambio o Creaci&oacute;n</a>
+                                <a href="holdSyllabusList.html">Prontuarios para Revisar</a>
+                                <a href="userChargeList.html">Permisos de los Usuarios</a>
+                                <a href="userAdminPrivList.html">Administradores Temporeros</a>
+                                <a href="searchNewCourse.html">Lista de Cursos Nuevos</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a id="activo">Ayuda</a></li>
+                    <li><a href="signout.jsp">Logout</a></li>
+                </b>
+            </ul>
+          </nav>
+        </div>
+        <div class = "blankpage">
+            <h1>Ayuda sobre la p&aacute;gina para a&ntilde;adir cursos a programas:</h1>
+            <img id="addCourseToProgram" src="images_icons/addCourseToProgramHelpPic.JPG" alt="Foto de ayuda para describir las operaciones a realizar en la p&aacute;gina.">
+            <p>Lo primero a realizar para a&ntilde;adir cursos a los programas es seleccionar el grado o nivel acad&eacute;mico en el cual se encuentra el programa deseado. Si el programa no se encuentra en la lista mostrada en la imagen como la lista numero dos (2), recuerde que debe ir a la p&aacute;gina enfocada en la adici&oacute;n de programas de cursos bajo la categor&iacute;a de A&ntilde;adir del men&uacute; que se encuentra en la parte superior.</p>
+            <p>Una vez seleccione el programa deseado de la lista numero dos (2), seleccionar&aacute; de la lista n&uacute;mero tres (3) el curso que desea a&ntilde;adir. Se puede a&ntilde;adir un curso a la vez. Para a&ntilde;adir el curso al programa deber&aacute; presionar el bot&oacute;n A&ntilde;adir mostrado sobre el &aacute;rea enumerada como cuatro (4). Por el contrario, si desea remover el curso de la lista debe presionar el bot&oacute;n Remover.</p>
+            <p>Por &uacute;ltimo, todos los cursos a&ntilde;adidos se podr&aacute;n ver en forma de lista en el &aacute;rea enumerada como cinco (5). Cabe recalcar que la lista no muestra los cursos que ya posee el programa, por lo cual se puede generar un error en caso de que se intente a&ntilde;adir un curso que ya posee el programa.</p>
+            <!--Back Button-->
+            <button id = "backBtn" type="button" onclick="window.location.href='addCourseToProgram.html';">Volver a la p&aacute;gina anterior</button>
+        </div><!--Blankpage closing div tag--> 
+    </body>
+</html>
