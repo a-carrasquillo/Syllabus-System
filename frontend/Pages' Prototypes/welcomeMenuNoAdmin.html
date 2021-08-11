@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <!--Indicates the encoding of the characters-->
+        <meta charset="utf-8">
+        <!--Authors of the web page-->
+        <meta name="author" content="a-carrasquillo, arivesan">
+        <!--Importing the CSS style-sheet-->
+        <link rel = "stylesheet" type="text/css" href="css/welcomeMenu.css">
+        <!--Importing JS required-->
+        <script src="https://kit.fontawesome.com/7ea556f8eb.js" crossorigin="anonymous"></script>
+        <!--Website title-->
+        <title>Home</title>
+        <!--CSS required for the background picture-->
+        <style type="text/css">
+            body {
+              background-image: url(images_icons/esc_educacion2.JPG);
+              -webkit-background-size:cover;
+              background-size:cover;
+              background-position: center center;
+              height: 100vh;
+              background-repeat: no-repeat;
+              background-attachment: fixed;  
+            }
+        </style>
+    </head>
+    <body>
+        <img class ="logo" src="images_icons/uni-logo.png" alt="Logo Ana G. Mendez">
+        <div class="custom-padding">
+          <nav>
+            <ul class="menu-area">
+                <b>
+                    <li><a href="welcomeMenu.html" id="activo">Home</a></li>
+                    <li><a href="pendingRequestStatus.html">Estado de solicitudes</a></li>
+                    <li><a href="holdList.html">Lista de prontuarios retenidos</a></li>
+                    <li><a href="searchNewCourse.html">Lista de Cursos sin prontuarios</a></li>
+                    <li><a href="helpWelcomeMenu.html">Ayuda</a></li>
+                    <li><a href="signout.jsp">Logout</a></li>
+                </b>
+            </ul>
+          </nav>
+        </div>
+        <div class = "blankpage">
+            <h1>B&uacute;squeda de Prontuarios:</h1>
+                <!--Search Bar Section-->
+                <div class="search_bar">
+				    <form id="search" action="searchCourseCode.jsp" method="post">
+                        <input type="text" placeholder="Buscar..." name="search" class="search" required>
+                        <button type="submit" class="search_button" accesskey="enter"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            <!-- Control buttons -->     
+            <div id="myBtnContainer">
+              <button class="btn active" onclick="filterSelection('all')"> Mostrar Todos </button>
+              <button class="btn" onclick="filterSelection('bachillerato')"> Bachillerato </button>
+              <button class="btn" onclick="filterSelection('maestria')"> Maestr&iacute;a </button>
+              <button class="btn" onclick="filterSelection('doctorado')"> Doctorado </button>
+            </div>
+            
+            <!--<h2>No hay programas disponibles, favor de notificarlo a los administradores.</h2>-->
+            
+            <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories)--> 
+            <div class="container">
+                <div class="filterDiv bachillerato">
+                    <form action="searchProgramCourses.jsp" method="post">
+                        <input type="hidden" name="idPrograma" value="id1">
+                        <button type="submit" class="programa">Preescolar</button>
+                    </form>
+                </div>
+                <div class="filterDiv bachillerato">
+                    <form action="searchProgramCourses.jsp" method="post">
+                        <input type="hidden" name="idPrograma" value="id1">
+                        <button type="submit" class="programa">Elemental Primario</button>
+                    </form> 
+                </div>
+                <div class="filterDiv bachillerato">
+                    <form action="searchProgramCourses.jsp" method="post">
+                        <input type="hidden" name="idPrograma" value="id1">
+                        <button type="submit" class="programa">Ingl&eacute;s Elemental</button>
+                    </form>
+                </div>
+                <div class="filterDiv bachillerato">
+                    <form action="searchProgramCourses.jsp" method="post">
+                        <input type="hidden" name="idPrograma" value="id1">
+                        <button type="submit" class="programa">Educaci&oacute;n Especial</button>
+                    </form>
+                </div>
+                <div class="filterDiv bachillerato">
+                    <form action="searchProgramCourses.jsp" method="post">
+                        <input type="hidden" name="idPrograma" value="id1">
+                        <button type="submit" class="programa">Educaci&oacute;n F&iacute;sica</button>
+                    </form>
+                </div>
+                <div class="filterDiv bachillerato">
+                    <form action="searchProgramCourses.jsp" method="post">
+                        <input type="hidden" name="idPrograma" value="id1">
+                        <button type="submit" class="programa">Educaci&oacute;n Secundaria  Biolog&iacute;a</button>
+                    </form>
+                </div>
+                <div class="filterDiv bachillerato">
+                    <form action="searchProgramCourses.jsp" method="post">
+                        <input type="hidden" name="idPrograma" value="id1">
+                        <button type="submit" class="programa">Educaci&oacute;n Secundaria  Ciencia</button>
+                    </form>
+                </div>
+                <div class="filterDiv bachillerato">
+                    <form action="searchProgramCourses.jsp" method="post">
+                        <input type="hidden" name="idPrograma" value="id1">
+                        <button type="submit" class="programa">Educaci&oacute;n Secundaria  Historia</button>
+                    </form>
+                </div>
+                <div class="filterDiv bachillerato">
+                    <form action="searchProgramCourses.jsp" method="post">
+                        <input type="hidden" name="idPrograma" value="id1">
+                        <button type="submit" class="programa">Educaci&oacute;n Secundaria Ingl&eacute;s</button>
+                    </form>
+                </div>
+                <div class="filterDiv bachillerato">
+                    <form action="searchProgramCourses.jsp" method="post">
+                        <input type="hidden" name="idPrograma" value="id1">
+                        <button type="submit" class="programa">Educaci&oacute;n Secundaria  Matem&aacute;ticas</button>
+                    </form>
+                </div>
+                <div class="filterDiv bachillerato">
+                    <form action="searchProgramCourses.jsp" method="post">
+                        <input type="hidden" name="idPrograma" value="id1">
+                        <button type="submit" class="programa">Educaci&oacute;n Secundaria Qu&iacute;mica</button>
+                    </form>
+                </div>
+                <div class="filterDiv bachillerato">
+                    <form action="searchProgramCourses.jsp" method="post">
+                        <input type="hidden" name="idPrograma" value="id1">
+                        <button type="submit" class="programa">Educaci&oacute;n Secundaria Vocacional Industrial</button>
+                    </form>
+                </div>
+                <div class="filterDiv maestria">
+                    <form action="searchProgramCourses.jsp" method="post">
+                        <input type="hidden" name="idPrograma" value="id1">
+                        <button type="submit" class="programa">Administraci&oacute;n Educativa</button>
+                    </form>
+                </div>
+                <div class="filterDiv doctorado">
+                    <form action="searchProgramCourses.jsp" method="post">
+                        <input type="hidden" name="idPrograma" value="id1">
+                        <button type="submit" class="programa">Liderazgo Educativo</button>
+                    </form>
+                </div>
+            </div>
+        </div> 
+        
+        <script>
+            //Automatic load all the programs at the beginning
+            filterSelection("all")
+
+            function filterSelection(c) {
+                var x, i;
+                x = document.getElementsByClassName("filterDiv");
+                if (c == "all") c = "";
+                for (i = 0; i < x.length; i++) {
+                    w3RemoveClass(x[i], "show");
+                    if (x[i].className.indexOf(c) > -1) 
+                        w3AddClass(x[i], "show");
+                }
+            }
+
+            function w3AddClass(element, name) {
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (i = 0; i < arr2.length; i++) {
+                    if (arr1.indexOf(arr2[i]) == -1)
+                        element.className += " " + arr2[i];
+                }
+            }
+
+            function w3RemoveClass(element, name) {
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (i = 0; i < arr2.length; i++) {
+                    while (arr1.indexOf(arr2[i]) > -1) {
+                        arr1.splice(arr1.indexOf(arr2[i]), 1);     
+                    }
+                }
+                element.className = arr1.join(" ");
+            }
+
+            // Add active class to the current button (highlight it)
+            var btnContainer = document.getElementById("myBtnContainer");
+            var btns = btnContainer.getElementsByClassName("btn");
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click", function() {
+                    var current = document.getElementsByClassName("active");
+                    current[0].className = current[0].className.replace(" active", "");
+                    this.className += " active";
+                });
+            }
+        </script>
+    </body>
+</html>

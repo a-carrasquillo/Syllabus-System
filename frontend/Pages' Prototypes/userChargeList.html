@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!--Indicates the encoding of the characters-->
+        <meta charset="utf-8">
+        <!--Authors of the web page-->
+        <meta name="author" content="a-carrasquillo, arivesan">
+        <!--Importing the CSS style-sheet-->
+        <link rel = "stylesheet" type="text/css" href="css/userChargeList.css">
+        <!--Importing JS required-->
+        <script src="https://kit.fontawesome.com/7ea556f8eb.js" crossorigin="anonymous"></script>
+        <!--Website title-->
+        <title>Lista de Usuarios</title>
+        <!--CSS required for the background picture-->
+        <style type="text/css">
+            body {
+              background-image: url(images_icons/esc_educacion2.JPG);
+              -webkit-background-size:cover;
+              background-size:cover;
+              background-position: center center;
+              height: 100vh;
+              background-repeat: no-repeat;
+              background-attachment: fixed;  
+            }
+        </style>
+    </head>
+    <body>
+        <img class ="logo" src="images_icons/uni-logo.png" alt="Logo Ana G. Mendez">
+        <!--Menu begins here-->
+        <div class="custom-padding">
+          <nav>
+            <ul class="menu-area">
+                <b>
+                    <li><a href="welcomeMenu.html">Home</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Añadir
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="addProgram.html">Programa</a>
+                                <a href="addNewCourse.html">Curso</a>
+                                <a href="addCourseToProgram.html">Cursos a Programas</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Reglas
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="addRules.html">Añadir Regla</a>
+                                <a href="listRules.html">Lista de Reglas</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn" id="activo">Listas
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="changeReqList.html">Solicitudes de Cambio o Creación</a>
+                                <a href="holdSyllabusList.html">Prontuarios para Revisar</a>
+                                <a href="userChargeList.html" id="activo">Permisos de los Usuarios</a>
+                                <a href="userAdminPrivList.html">Administradores Temporeros</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#">Ayuda</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                </b>
+            </ul>
+          </nav>
+        </div><!--Menu ends here-->
+        
+        <div class = "cuadro_centro">
+            <form action="editPermissions.jsp" method="post">
+                <table>
+                    <tr>
+                        <th>Seleccionar</th>
+                        <th>Nombre</th>
+                        <th>Cargo</th>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="check" name="user" value="id#"></td>
+                        <td><input type="text" class="info" value="Juan del Pueblo" readonly></td>
+                        <td><input type="text" class="info" value="Profesor/a" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="check" name="user" value="id#"></td>
+                        <td><input type="text" class="info" value="John Doe" readonly></td>
+                        <td><input type="text" class="info" value="Profesor/a" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="check" name="user" value="id#"></td>
+                        <td><input type="text" class="info" value="Maria Anders" readonly></td>
+                        <td><input type="text" class="info" value="Empleado/a" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="check" name="user" value="id#"></td>
+                        <td><input type="text" class="info" value="Francisco Chang" readonly></td>
+                        <td><input type="text" class="info" value="Profesor/a" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="check" name="user" value="id#"></td>
+                        <td><input type="text" class="info" value="Roland Ming" readonly></td>
+                        <td><input type="text" class="info" value="Profesor/a" readonly></td>
+                    </tr>      
+                  </table>
+                  <div>
+                    <button type="button" class="cancelBtn" onclick="window.location.href='welcomeMenu.jsp';">Cancelar</button>
+                    <button type="submit" class="submitBtn" onclick="window.location.href='editPermissions.html';">Ver Permisos de Edici&oacute;n</button>
+                  </div>
+            </form>
+        </div>
+    </body>
+</html>
