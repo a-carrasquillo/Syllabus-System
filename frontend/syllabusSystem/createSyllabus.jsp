@@ -439,24 +439,18 @@
 					                			while(res.next()) {
 					                				// Structure to make sure that the rules are
 					                				// organize into two columns
-					                				if(counter == 0) {
+					                				if(counter%2 == 0) {
 					                					%>
 					                					<tr>
 						                            		<td><input type="checkbox" name="regla" value="<%=res.getString(1)%>"/> <%=res.getString(2)%></td>
-					                					<%
-					                					counter++;
-					                				} else if(counter == 1) {
+					                					<%	
+					                				} else {
 					                					%>
 						                					<td><input type="checkbox" name="regla" value="<%=res.getString(1)%>"/> <%=res.getString(2)%></td>
 							                        	</tr>
 					                					<%
-					                					counter++;
-					                				} else {
-					                					// Reset the counter
-					                					counter = 0;
-					                					// Move the result set pointer one step backwards
-					                					res.previous();
 					                				}
+					                				counter++;
 					                			}
 					                			%>   
 					                    	</table>              
@@ -1045,23 +1039,18 @@
 					                					checked = "checked";
 					                				}
 					                				// Structure that makes sure that the rules are organize into two columns
-					                				if(counter == 0) {
+					                				if(counter%2 == 0) {
 					                					%>
 					                					<tr>
-						                            		<td><input type="checkbox" name="regla" value="<%=res.getString(1)%>" <%=checked%>/> <%=res.getString(2)%></td>
-					                					<%
-					                					counter++;
-					                				} else if(counter == 1) {
+						                            		<td><input type="checkbox" name="regla" value="<%=res.getString(1)%>"/> <%=res.getString(2)%></td>
+					                					<%	
+					                				} else {
 					                					%>
-						                					<td><input type="checkbox" name="regla" value="<%=res.getString(1)%>" <%=checked%>/> <%=res.getString(2)%></td>
+						                					<td><input type="checkbox" name="regla" value="<%=res.getString(1)%>"/> <%=res.getString(2)%></td>
 							                        	</tr>
 					                					<%
-					                					counter++;
-					                				} else {
-					                					// Reset the counter
-					                					counter = 0;
-					                					res.previous();
 					                				}
+					                				counter++;
 					                			}
 					                			%>   
 					                    	</table>              
