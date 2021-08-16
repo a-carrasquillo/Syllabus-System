@@ -18,6 +18,19 @@ import java.util.*;
 public class applicationDBManager {
 	// myDBConn is an MySQLConnector object for accessing the database
 	private MySQLConnector myDBConn;
+    // Define constants that represents errors while performing inserts
+    // of the syllabus information
+    final static int BASIC_INFO_ERROR = 1;
+    final static int PREREQUISITES_ERROR = 2;
+    final static int COREQUISITES_ERROR = 3;
+    final static int OBJECTIVE_ERROR = 4;
+    final static int THEMATIC_CONTENT_ERROR = 5;
+    final static int TEXTBOOK_ERROR = 6;
+    final static int BIBLIOGRAPHY_ERROR = 7;
+    final static int ONLINE_RESOURCE_ERROR = 8;
+    final static int RULE_ERROR = 9;
+    final static int TEACHING_STRATEGY_ERROR = 10;
+    final static int ASSESSMENT_STRATEGY_ERROR = 11;
 	
 	/**
 		<h1>Default constructor</h1>
@@ -1624,7 +1637,7 @@ public class applicationDBManager {
                     System.out.println("The prerequisites insert fail...");
                     myDBConn.doRollback();
                     myDBConn.enableAutoCommit();
-                    return 2;
+                    return PREREQUISITES_ERROR;
                 }
             }
 
@@ -1637,7 +1650,7 @@ public class applicationDBManager {
                     System.out.println("The co-requisites insert fail...");
                     myDBConn.doRollback();
                     myDBConn.enableAutoCommit();
-                    return 3;
+                    return COREQUISITES_ERROR;
                 } 
             }
 
@@ -1646,7 +1659,7 @@ public class applicationDBManager {
                 System.out.println("Objectives with their alignment insert fail...");
                 myDBConn.doRollback();
                 myDBConn.enableAutoCommit();
-                return 4;
+                return OBJECTIVE_ERROR;
             }
 
             // Insert the thematic content
@@ -1654,7 +1667,7 @@ public class applicationDBManager {
                 System.out.println("Thematic content insert fail...");
                 myDBConn.doRollback();
                 myDBConn.enableAutoCommit();
-                return 5;
+                return THEMATIC_CONTENT_ERROR;
             }
             
             // Insert the textbook(s)
@@ -1662,7 +1675,7 @@ public class applicationDBManager {
                 System.out.println("Textbooks insert fail...");
                 myDBConn.doRollback();
                 myDBConn.enableAutoCommit();
-                return 6;
+                return TEXTBOOK_ERROR;
             }
 
             // Insert the bibliographies
@@ -1670,7 +1683,7 @@ public class applicationDBManager {
                 System.out.println("Bibliographies insert fail...");
                 myDBConn.doRollback();
                 myDBConn.enableAutoCommit();
-                return 7;
+                return BIBLIOGRAPHY_ERROR;
             }
 
             // Insert the online resources
@@ -1678,7 +1691,7 @@ public class applicationDBManager {
                 System.out.println("Online resources insert fail...");
                 myDBConn.doRollback();
                 myDBConn.enableAutoCommit();
-                return 8;
+                return ONLINE_RESOURCE_ERROR;
             }
 
             // Insert the rules
@@ -1686,7 +1699,7 @@ public class applicationDBManager {
                 System.out.println("Rules insert fail...");
                 myDBConn.doRollback();
                 myDBConn.enableAutoCommit();
-                return 9;
+                return RULE_ERROR;
             }
 
             // Insert teaching strategies
@@ -1694,7 +1707,7 @@ public class applicationDBManager {
                 System.out.println("Teaching strategies insert fail...");
                 myDBConn.doRollback();
                 myDBConn.enableAutoCommit();
-                return 10;
+                return TEACHING_STRATEGY_ERROR;
             }
             
             // Insert assessment strategies
@@ -1702,7 +1715,7 @@ public class applicationDBManager {
                 System.out.println("Assessment strategies insert fail...");
                 myDBConn.doRollback();
                 myDBConn.enableAutoCommit();
-                return 11;
+                return ASSESSMENT_STRATEGY_ERROR;
             }
             // Since all inserts were made successfully, perform a commit
             // to save the changes
@@ -1716,7 +1729,7 @@ public class applicationDBManager {
         System.out.println("Insert fail into syllabuses table...");
         myDBConn.doRollback();
         myDBConn.enableAutoCommit();
-        return 1;
+        return BASIC_INFO_ERROR;
     }
 
     /**
