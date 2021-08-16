@@ -7,7 +7,7 @@ Web system that allows the creation and management of course syllabuses and thei
 
 <b>Information regarding the database:</b><br>
 
-![image](https://user-images.githubusercontent.com/84880545/129571920-c5224ee4-a3c7-4e34-ad27-02fc2880da13.png)
+![image](https://user-images.githubusercontent.com/84880545/129573048-ed09f3db-6e1c-430e-864d-5cceb4b1ff56.png)
 
 
 <b>Page-flow information:</b><br>
