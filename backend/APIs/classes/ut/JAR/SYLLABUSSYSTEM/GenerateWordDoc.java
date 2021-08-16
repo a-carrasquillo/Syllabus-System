@@ -529,7 +529,7 @@ public class GenerateWordDoc {
 			@param args[]: String array 
 	*/
 	public static void main(String[] args) {
-		System.out.println("Testing formatDate method...")
+		System.out.println("Testing formatDate method...");
 		System.out.println(formatDate("2021-08-09 10:10:10"));
 	}
 }

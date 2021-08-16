@@ -1368,7 +1368,7 @@ public class applicationDBManager {
                             objectiveAlignment.remove(0);
                         }
                     } else {
-                        System.out.println("The objective alignment was empty for a objective, verify which one...")
+                        System.out.println("The objective alignment was empty for a objective, verify which one...");
                         return false;
                     } 
                 }
