@@ -309,49 +309,49 @@
 				              <body>
 				            <%
 				            // Evaluate the type of error
-				            if(insertResult == 1) {
+				            if(insertResult == appDBMnger.BASIC_INFO_ERROR) {
 				            	%>
-									<h1 id="error">Error al insertar la informaci&oacute;n. C&oacute;digo de error: 1. Informar a la persona designada.</h1>
+									<h1 id="error">Error al insertar la informaci&oacute;n. C&oacute;digo de error: BASIC_INFO_ERROR (1). Informar a la persona designada.</h1>
 		          				<%
-				            } else if(insertResult == 2) {
+				            } else if(insertResult == appDBMnger.PREREQUISITES_ERROR) {
 				            	%>
-									<h1 id="error">Error al insertar la informaci&oacute;n. C&oacute;digo de error: 2. Lo m&aacute;s probable es que hay un c&oacute;digo de curso mal en los prerequisitos, o no los estan separando por comas (,)</h1>
+									<h1 id="error">Error al insertar la informaci&oacute;n. C&oacute;digo de error: PREREQUISITES_ERROR (2). Lo m&aacute;s probable es que hay un c&oacute;digo de curso mal en los prerequisitos, o no los estan separando por comas (,)</h1>
 		          				<%
-				            } else if(insertResult == 3) {
+				            } else if(insertResult == appDBMnger.COREQUISITES_ERROR) {
 				            	%>
-				            		<h1 id="error">Error al insertar la informaci&oacute;n. C&oacute;digo de error: 3. Lo m&aacute;s probable es que hay un c&oacute;digo de curso mal en los corequisitos, o no los estan separando por comas (,)</h1>
+				            		<h1 id="error">Error al insertar la informaci&oacute;n. C&oacute;digo de error: COREQUISITES_ERROR (3). Lo m&aacute;s probable es que hay un c&oacute;digo de curso mal en los corequisitos, o no los estan separando por comas (,)</h1>
 				            	<%
-				            } else if(insertResult == 4) {
+				            } else if(insertResult == appDBMnger.OBJECTIVE_ERROR) {
 				            	%>
-				            		<h1 id="error">Error al insertar la informaci&oacute;n. C&oacute;digo de error: 4. Informar a la persona designada.</h1>
+				            		<h1 id="error">Error al insertar la informaci&oacute;n. C&oacute;digo de error: OBJECTIVE_ERROR (4). Informar a la persona designada.</h1>
 				            	<%
-				            } else if(insertResult == 5) {
+				            } else if(insertResult == appDBMnger.THEMATIC_CONTENT_ERROR) {
 				            	%>
-				            		<h1 id="error">Error al insertar la informaci&oacute;n. C&oacute;digo de error: 5. Informar a la persona designada.</h1>
+				            		<h1 id="error">Error al insertar la informaci&oacute;n. C&oacute;digo de error: THEMATIC_CONTENT_ERROR (5). Informar a la persona designada.</h1>
 				            	<%
-				            } else if(insertResult == 6) {
+				            } else if(insertResult == appDBMnger.TEXTBOOK_ERROR) {
 				            	%>
-				            		<h1 id="error">Error al insertar la informaci&oacute;n. C&oacute;digo de error: 6. Informar a la persona designada.</h1>
+				            		<h1 id="error">Error al insertar la informaci&oacute;n. C&oacute;digo de error: TEXTBOOK_ERROR (6). Informar a la persona designada.</h1>
 				            	<%
-				            } else if(insertResult == 7) {
+				            } else if(insertResult == appDBMnger.BIBLIOGRAPHY_ERROR) {
 				            	%>
-				            		<h1 id="error">Error al insertar la informaci&oacute;n. C&oacute;digo de error: 7. Informar a la persona designada.</h1>
+				            		<h1 id="error">Error al insertar la informaci&oacute;n. C&oacute;digo de error: BIBLIOGRAPHY_ERROR (7). Informar a la persona designada.</h1>
 				            	<%
-				            } else if(insertResult == 8) {
+				            } else if(insertResult == appDBMnger.ONLINE_RESOURCE_ERROR) {
 				            	%>
-				            		<h1 id="error">Error al insertar la informaci&oacute;n. C&oacute;digo de error: 8. Informar a la persona designada.</h1>
+				            		<h1 id="error">Error al insertar la informaci&oacute;n. C&oacute;digo de error: ONLINE_RESOURCE_ERROR (8). Informar a la persona designada.</h1>
 				            	<%
-				            } else if(insertResult == 9) {
+				            } else if(insertResult == appDBMnger.RULE_ERROR) {
 				            	%>
-				            		<h1 id="error">Error al insertar la informaci&oacute;n. C&oacute;digo de error: 9. Recuerde que debe seleccionar al menos una regla. Si el problema persiste, informar a la persona designada.</h1>
+				            		<h1 id="error">Error al insertar la informaci&oacute;n. C&oacute;digo de error: RULE_ERROR (9). Recuerde que debe seleccionar al menos una regla. Si el problema persiste, informar a la persona designada.</h1>
 				            	<%
-				            } else if(insertResult == 10) {
+				            } else if(insertResult == appDBMnger.TEACHING_STRATEGY_ERROR) {
 				            	%>
-				            		<h1 id="error">Error al insertar la informaci&oacute;n. C&oacute;digo de error: 10. Informar a la persona designada.</h1>
+				            		<h1 id="error">Error al insertar la informaci&oacute;n. C&oacute;digo de error: TEACHING_STRATEGY_ERROR (10). Informar a la persona designada.</h1>
 				            	<%
 				            } else {
 				            	%>
-				            		<h1 id="error">Error al insertar la informaci&oacute;n. C&oacute;digo de error: 11. Informar a la persona designada.</h1>
+				            		<h1 id="error">Error al insertar la informaci&oacute;n. C&oacute;digo de error: ASSESSMENT_STRATEGY_ERROR (11). Informar a la persona designada.</h1>
 				            	<%
 				            }
 				            %>
